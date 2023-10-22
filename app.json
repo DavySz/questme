@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "questme",
+    "slug": "questme",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
