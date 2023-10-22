@@ -10,7 +10,7 @@ import {
   Rubik_400Regular,
 } from "@expo-google-fonts/rubik";
 
-import { theme } from "@presentation/styles/theme";
+import { theme } from "@presentation/styles";
 import { AppRoutes } from "@main/routes/app-routes";
 
 export const Entry = (): ReturnType<React.FC> => {
