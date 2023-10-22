@@ -1,4 +1,4 @@
+import { Entry } from "@main/screens/entry";
 import { registerRootComponent } from "expo";
-import { AppRoutes } from "./src/main/routes/app-routes";
 
-registerRootComponent(AppRoutes);
+registerRootComponent(Entry);
