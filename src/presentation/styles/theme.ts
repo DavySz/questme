@@ -6,6 +6,10 @@ export const theme = {
 
     transparent: "transparent",
 
+    company: {
+      facebook: "#0056B2",
+    },
+
     support: {
       "accent-1": "#FFD6DD",
       "accent-2": "#C9F2E9",

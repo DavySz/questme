@@ -18,4 +18,5 @@ export type TThemeColors =
   | "neutral-gey-2"
   | "neutral-gey-3"
   | "neutral-gey-4"
-  | "neutral-gey-5";
+  | "neutral-gey-5"
+  | "company-facebook";

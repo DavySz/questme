@@ -23,6 +23,8 @@ export function colorMapping(color: TThemeColors) {
     "neutral-gey-3": colors.neutral["gey-3"],
     "neutral-gey-4": colors.neutral["gey-4"],
     "neutral-gey-5": colors.neutral["gey-5"],
+
+    "company-facebook": colors.company.facebook,
   };
 
   return colorsMap[color];
