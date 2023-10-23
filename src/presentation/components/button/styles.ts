@@ -49,9 +49,11 @@ const getIconSide = (side: TIconSide) => {
     `;
   }
 
-  return css`
-    margin-left: 16px;
-  `;
+  if (side === "right") {
+    return css`
+      margin-left: 16px;
+    `;
+  }
 };
 
 const getBorder = (variant: TButtonVariant, theme: TTheme) => {
