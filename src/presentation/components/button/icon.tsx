@@ -8,9 +8,9 @@ export const ButtonIcon = ({
 }: IButtonIcon): ReturnType<React.FC> => {
   const renderIcon = () => {
     if (color) {
-      return <Icon color={color} />;
+      return <Icon color={color} testID="icon-with-color" />;
     }
-    return <Icon />;
+    return <Icon testID="icon-without-color" />;
   };
 
   return <IconWrapper side={side}>{renderIcon()}</IconWrapper>;
