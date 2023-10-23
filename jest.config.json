@@ -6,5 +6,12 @@
   ],
   "moduleNameMapper": {
     "\\.svg": "<rootDir>/tests/mocks/svg-mock.js"
-  }
+  },
+  "collectCoverageFrom": [
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/main/**/*",
+    "!<rootDir>/src/**/index.ts",
+    "!**/types.{ts,tsx}",
+    "!**/assets/*"
+  ]
 }
