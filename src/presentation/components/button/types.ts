@@ -1,4 +1,5 @@
 import { ElementType } from "react";
+import { TouchableOpacityProps } from "react-native";
 
 export type TButtonVariant =
   | "primary"
@@ -7,9 +8,9 @@ export type TButtonVariant =
   | "google"
   | "facebook";
 
-export type TIconSide = "left" | "right";
+export type TIconSide = "left" | "right" | "none";
 
-export interface IButtonRoot {
+export interface IButtonRoot extends TouchableOpacityProps {
   variant?: TButtonVariant;
   children: React.ReactNode;
   full?: boolean;
@@ -32,6 +33,7 @@ export interface IChildProps {
 export interface IButtonIcon {
   icon: ElementType;
   side: TIconSide;
+  color?: string;
 }
 
 export interface IButtonIconStyles {

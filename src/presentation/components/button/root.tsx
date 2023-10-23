@@ -7,6 +7,7 @@ export const ButtonRoot = ({
   variant = "primary",
   full = true,
   children,
+  ...rest
 }: IButtonRoot): ReturnType<React.FC<IButtonRoot>> => {
   const childrenWithProps = cloneElementWithProps<IChildProps>({
     props: { variant },
@@ -14,7 +15,7 @@ export const ButtonRoot = ({
   });
 
   return (
-    <Button variant={variant} full={full}>
+    <Button {...rest} variant={variant} full={full}>
       {childrenWithProps}
     </Button>
   );
