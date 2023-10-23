@@ -39,13 +39,29 @@ describe("Button", () => {
     test("Should render Button.Icon without errors", () => {
       render(<Button.Icon icon={GoogleIcon} side="left" />);
     });
+
+    test("Should render Button.Icon with color", async () => {
+      const { getByTestId } = render(
+        <Button.Icon icon={GoogleIcon} side="left" color="#000" />
+      );
+
+      expect(getByTestId("icon-with-color")).toBeTruthy();
+    });
+
+    test("Should render Button.Icon without color", async () => {
+      const { getByTestId } = render(
+        <Button.Icon icon={GoogleIcon} side="left" />
+      );
+
+      expect(getByTestId("icon-without-color")).toBeTruthy();
+    });
   });
 
   describe("Button.*", () => {
     test("Should render all button parts without errors", () => {
       const { getByText } = render(
         <ThemeProvider theme={theme}>
-          <Button.Root>
+          <Button.Root variant="google">
             <Button.Text>any-text</Button.Text>
             <Button.Icon icon={GoogleIcon} side="right" />
           </Button.Root>
