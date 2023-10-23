@@ -5,34 +5,31 @@ import { View } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import GoogleIcon from "@presentation/assets/google-icon.svg";
 
+function ProvidersWrapper({ children }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <Button.Root variant="google">{children}</Button.Root>
+    </ThemeProvider>
+  );
+}
 describe("Button", () => {
   describe("Button.Root", () => {
     test("Should render Button.Root without errors", () => {
-      render(
-        <ThemeProvider theme={theme}>
-          <Button.Root>
-            <View />
-          </Button.Root>
-        </ThemeProvider>
-      );
+      render(<View />, { wrapper: ProvidersWrapper });
     });
   });
 
   describe("Button.Text", () => {
     test("Should render Button.Text without errors", () => {
-      render(
-        <ThemeProvider theme={theme}>
-          <Button.Text>any-text</Button.Text>
-        </ThemeProvider>
-      );
+      render(<Button.Text>any-text</Button.Text>, {
+        wrapper: ProvidersWrapper,
+      });
     });
 
     test("Should render correct children text", () => {
-      const { getByText } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Text>any-text</Button.Text>
-        </ThemeProvider>
-      );
+      const { getByText } = render(<Button.Text>any-text</Button.Text>, {
+        wrapper: ProvidersWrapper,
+      });
 
       expect(getByText("any-text")).toBeTruthy();
     });
@@ -48,7 +45,7 @@ describe("Button", () => {
     test("Should render all button parts without errors", () => {
       const { getByText } = render(
         <ThemeProvider theme={theme}>
-          <Button.Root variant="google">
+          <Button.Root>
             <Button.Text>any-text</Button.Text>
             <Button.Icon icon={GoogleIcon} side="right" />
           </Button.Root>
