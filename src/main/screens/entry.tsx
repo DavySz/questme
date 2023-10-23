@@ -2,7 +2,6 @@ import React from "react";
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components";
 import * as SplashScreen from "expo-splash-screen";
-import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 
 import {
   Rubik_700Bold,
@@ -12,6 +11,7 @@ import {
 
 import { theme } from "@presentation/styles";
 import { AppRoutes } from "@main/routes/app-routes";
+import { StatusBar } from "react-native";
 
 export const Entry = (): ReturnType<React.FC> => {
   SplashScreen.preventAutoHideAsync();
@@ -30,7 +30,11 @@ export const Entry = (): ReturnType<React.FC> => {
 
   return (
     <ThemeProvider theme={theme}>
-      <ExpoStatusBar style="light" translucent />
+      <StatusBar
+        translucent
+        barStyle="light-content"
+        backgroundColor="transparent"
+      />
       <AppRoutes />
     </ThemeProvider>
   );
