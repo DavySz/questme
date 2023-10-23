@@ -1,5 +1,7 @@
 import { ButtonRoot } from "./root";
+import { ButtonText } from "./text";
 
 export const Button = {
-  root: ButtonRoot,
+  Root: ButtonRoot,
+  Text: ButtonText,
 };
