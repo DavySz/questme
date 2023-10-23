@@ -1,9 +1,21 @@
 import React from "react";
 import { Button } from "./styles";
-import { IRoot } from "./types";
+import { IButtonRoot, IChildProps } from "./types";
+import { cloneElementWithProps } from "@presentation/utils/clone-element";
 
 export const ButtonRoot = ({
   variant = "primary",
-}: IRoot): ReturnType<React.FC<IRoot>> => {
-  return <Button variant={variant}></Button>;
+  full = true,
+  children,
+}: IButtonRoot): ReturnType<React.FC<IButtonRoot>> => {
+  const childrenWithProps = cloneElementWithProps<IChildProps>({
+    props: { variant },
+    children,
+  });
+
+  return (
+    <Button variant={variant} full={full}>
+      {childrenWithProps}
+    </Button>
+  );
 };
