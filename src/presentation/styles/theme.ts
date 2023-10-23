@@ -4,6 +4,8 @@ export const theme = {
     secondary: "#9087E5",
     tertiary: "#FF8FA2",
 
+    transparent: "transparent",
+
     support: {
       "accent-1": "#FFD6DD",
       "accent-2": "#C9F2E9",
@@ -20,11 +22,10 @@ export const theme = {
       "gey-4": "#E6E6E6",
       "gey-5": "#EFEEFC",
     },
-
-    fonts: {
-      bold: "Rubik_700Bold",
-      medium: "Rubik_500Medium",
-      regular: "Rubik_400Regular",
-    },
+  },
+  fonts: {
+    bold: "Rubik_700Bold",
+    medium: "Rubik_500Medium",
+    regular: "Rubik_400Regular",
   },
 };
