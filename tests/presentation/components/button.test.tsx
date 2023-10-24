@@ -55,6 +55,40 @@ describe("Button", () => {
 
       expect(getByTestId("icon-without-color")).toBeTruthy();
     });
+
+    test("Should add margin right of 16px when Button.Icon receive left prop", async () => {
+      const { getByTestId } = render(
+        <Button.Icon icon={GoogleIcon} side="left" />
+      );
+
+      const iconWrapper = getByTestId("icon-wrapper");
+      const iconWrapperStyle = iconWrapper.props.style;
+
+      expect(iconWrapperStyle.marginRight).toBe(16);
+    });
+
+    test("Should add margin left of 16px when Button.Icon receive right prop", async () => {
+      const { getByTestId } = render(
+        <Button.Icon icon={GoogleIcon} side="right" />
+      );
+
+      const iconWrapper = getByTestId("icon-wrapper");
+      const iconWrapperStyle = iconWrapper.props.style;
+
+      expect(iconWrapperStyle.marginLeft).toBe(16);
+    });
+
+    test("Should not add margin when Button.Icon receive none prop", async () => {
+      const { getByTestId } = render(
+        <Button.Icon icon={GoogleIcon} side="none" />
+      );
+
+      const iconWrapper = getByTestId("icon-wrapper");
+      const iconWrapperStyle = iconWrapper.props.style;
+
+      expect(iconWrapperStyle.marginRight).toBeUndefined();
+      expect(iconWrapperStyle.marginLeft).toBeUndefined();
+    });
   });
 
   describe("Button.*", () => {
@@ -69,6 +103,66 @@ describe("Button", () => {
       );
 
       expect(getByText("any-text")).toBeTruthy();
+    });
+
+    test("Should render button with correct background color primary variant by default", () => {
+      const { getByTestId } = render(
+        <ThemeProvider theme={theme}>
+          <Button.Root>
+            <Button.Icon icon={GoogleIcon} side="right" />
+          </Button.Root>
+        </ThemeProvider>
+      );
+
+      const button = getByTestId("button-root-wrapper");
+      const buttonStyle = button.props.style;
+
+      expect(buttonStyle.backgroundColor).toBe(theme.colors.primary);
+    });
+
+    test("Should render button with correct background color when variant is passed", () => {
+      const { getByTestId } = render(
+        <ThemeProvider theme={theme}>
+          <Button.Root variant="tertiary">
+            <Button.Icon icon={GoogleIcon} side="right" />
+          </Button.Root>
+        </ThemeProvider>
+      );
+
+      const button = getByTestId("button-root-wrapper");
+      const buttonStyle = button.props.style;
+
+      expect(buttonStyle.backgroundColor).toBe(theme.colors.transparent);
+    });
+
+    test("Should render button with 100% width if full prop is passed", () => {
+      const { getByTestId } = render(
+        <ThemeProvider theme={theme}>
+          <Button.Root>
+            <Button.Icon icon={GoogleIcon} side="right" />
+          </Button.Root>
+        </ThemeProvider>
+      );
+
+      const button = getByTestId("button-root-wrapper");
+      const buttonStyle = button.props.style;
+
+      expect(buttonStyle.width).toBe("100%");
+    });
+
+    test("Should render button with content width if full prop is not passed", () => {
+      const { getByTestId } = render(
+        <ThemeProvider theme={theme}>
+          <Button.Root full={false}>
+            <Button.Icon icon={GoogleIcon} side="right" />
+          </Button.Root>
+        </ThemeProvider>
+      );
+
+      const button = getByTestId("button-root-wrapper");
+      const buttonStyle = button.props.style;
+
+      expect(buttonStyle.width).toBeUndefined();
     });
   });
 });
