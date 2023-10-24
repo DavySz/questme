@@ -3,8 +3,11 @@
     "name": "questme",
     "slug": "questme",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"],
+    "splash": {
+      "image": "./src/presentation/assets/splash.png",
+      "backgroundColor": "#6A5AE0",
+      "resizeMode": "contain"
+    }
   }
 }
