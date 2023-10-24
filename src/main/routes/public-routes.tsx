@@ -4,7 +4,11 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from "@react-navigation/native-stack";
-import { HomeContainer, OnboardingContainer } from "@presentation/screens";
+import {
+  HomeContainer,
+  SplashContainer,
+  OnboardingContainer,
+} from "@presentation/screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,12 +18,10 @@ const screenOptions: NativeStackNavigationOptions = {
 
 export const PublicRoutes = () => {
   return (
-    <Stack.Navigator
-      screenOptions={screenOptions}
-      initialRouteName="onboarding"
-    >
-      <Stack.Screen name="home" component={HomeContainer} />
+    <Stack.Navigator screenOptions={screenOptions} initialRouteName="splash">
+      <Stack.Screen name="splash" component={SplashContainer} />
       <Stack.Screen name="onboarding" component={OnboardingContainer} />
+      <Stack.Screen name="home" component={HomeContainer} />
     </Stack.Navigator>
   );
 };
