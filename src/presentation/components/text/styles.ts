@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components/native";
-import { ITextRootStyle, TTextVariant, TTypography } from "./types";
+import { ITextRootStyle, TTextAlign, TTextVariant, TTypography } from "./types";
 import { TTheme, colorMapping } from "@presentation/styles";
 
 export const getTypography = (variant: TTextVariant, theme: TTheme) => {
@@ -93,7 +93,19 @@ export const getTypography = (variant: TTextVariant, theme: TTheme) => {
   `;
 };
 
+export const getTextAlign = (align: TTextAlign) => {
+  if (align) {
+    return css`
+      text-align: ${align};
+    `;
+  }
+
+  return null;
+};
+
 export const CustomText = styled.Text<ITextRootStyle>`
   ${({ theme, variant }) => getTypography(variant, theme as TTheme)};
   color: ${({ color }) => colorMapping(color)};
+
+  ${({ align }) => getTextAlign(align)}
 `;

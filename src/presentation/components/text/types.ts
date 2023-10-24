@@ -1,5 +1,7 @@
 import { TThemeColors } from "@presentation/styles";
 
+export type TTextAlign = "center" | "justify" | "right" | "left";
+
 export type TTextVariant =
   | "heading-1"
   | "heading-2"
@@ -20,6 +22,7 @@ export type TTextVariant =
 
 export interface ITextRoot {
   testID?: string;
+  align?: TTextAlign;
   color: TThemeColors;
   variant: TTextVariant;
   children: React.ReactNode;
@@ -28,6 +31,7 @@ export interface ITextRoot {
 export interface ITextRootStyle {
   variant: TTextVariant;
   color: TThemeColors;
+  align: TTextAlign;
 }
 
 export interface TTypography {
