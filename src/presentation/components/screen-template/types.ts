@@ -23,6 +23,7 @@ export interface IChildProps {
 
 export interface IScreenTemplateBubblesBackground {
   children: React.ReactNode;
+  testID: string;
 }
 
 export interface IScreenTemplateBubble {

@@ -14,11 +14,11 @@ export const ScreenTemplateHeader = ({
   const theme = useTheme();
 
   const renderGoBack = () => {
-    if (!goBack) return;
+    if (!goBack) return null;
 
     return (
       <Wrapper>
-        <Button.Root onPress={goBack} full={false} variant="tertiary">
+        <Button.Root variant="tertiary" onPress={goBack} full={false}>
           <Button.Icon
             color={getIconColor(theme as TTheme, variant)}
             icon={ArrowLeftIcon}
@@ -30,10 +30,14 @@ export const ScreenTemplateHeader = ({
   };
 
   const renderTitle = () => {
-    if (!children) return;
+    if (!children) return null;
 
     return (
-      <Text.Root color={getTextColor(variant)} variant="heading-3">
+      <Text.Root
+        variant="heading-3"
+        testID="header-title"
+        color={getTextColor(variant)}
+      >
         {children}
       </Text.Root>
     );

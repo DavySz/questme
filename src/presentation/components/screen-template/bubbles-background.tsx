@@ -3,6 +3,7 @@ import { BubbleWrapper, PositionWrapper } from "./styles";
 import { IScreenTemplateBubblesBackground } from "./types";
 
 export const ScreenTemplateBubblesBackground = ({
+  testID,
   children,
 }: IScreenTemplateBubblesBackground): ReturnType<
   React.FC<IScreenTemplateBubblesBackground>
@@ -13,7 +14,7 @@ export const ScreenTemplateBubblesBackground = ({
   const fillSmallSize = 20;
 
   return (
-    <BubbleWrapper>
+    <BubbleWrapper testID={testID}>
       <PositionWrapper left={56} top={174}>
         <ScreenTemplateBubble size={fillMediumSize} type="fill" />
       </PositionWrapper>

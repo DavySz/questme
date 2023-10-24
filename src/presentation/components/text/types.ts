@@ -19,6 +19,7 @@ export type TTextVariant =
   | "text-x-small";
 
 export interface ITextRoot {
+  testID?: string;
   color: TThemeColors;
   variant: TTextVariant;
   children: React.ReactNode;

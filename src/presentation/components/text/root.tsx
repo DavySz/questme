@@ -4,11 +4,12 @@ import { CustomText } from "./styles";
 
 export const TextRoot = ({
   color,
+  testID,
   variant,
   children,
 }: ITextRoot): ReturnType<React.FC> => {
   return (
-    <CustomText variant={variant} color={color}>
+    <CustomText testID={testID} variant={variant} color={color}>
       {children}
     </CustomText>
   );

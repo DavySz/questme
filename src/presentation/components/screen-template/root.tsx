@@ -16,11 +16,15 @@ export const ScreenTemplateRoot = ({
 
   if (variant === "tertiary") {
     return (
-      <ScreenTemplateBubblesBackground>
+      <ScreenTemplateBubblesBackground testID="bubbles-container">
         {childrenWithProps}
       </ScreenTemplateBubblesBackground>
     );
   }
 
-  return <Container variant={variant}>{childrenWithProps}</Container>;
+  return (
+    <Container variant={variant} testID="default-container">
+      {childrenWithProps}
+    </Container>
+  );
 };
