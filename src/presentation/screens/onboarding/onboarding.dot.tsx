@@ -6,11 +6,11 @@ export const OnboardingDot = ({
 }: IOboardingDot): ReturnType<React.FC<IOboardingDot>> => {
   if (isSelected) {
     return (
-      <Circle>
+      <Circle testID="is-selected-dot">
         <CircleContent />
       </Circle>
     );
   }
 
-  return <CircleContent />;
+  return <CircleContent testID="is-not-selected-dot" />;
 };
