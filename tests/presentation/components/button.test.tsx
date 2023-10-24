@@ -3,7 +3,7 @@ import { theme } from "@presentation/styles";
 import { render } from "@testing-library/react-native";
 import { View } from "react-native";
 import { ThemeProvider } from "styled-components/native";
-import GoogleIcon from "@presentation/assets/google-icon.svg";
+import GoogleIcon from "@presentation/assets/icons/google-icon.svg";
 
 function ProvidersWrapper({ children }) {
   return (

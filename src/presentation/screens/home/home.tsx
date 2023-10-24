@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import { Button } from "@presentation/components";
-import GoogleIcon from "@presentation/assets/google-icon.svg";
+import GoogleIcon from "@presentation/assets/icons/google-icon.svg";
 
 export const Home = (): ReturnType<React.FC> => {
   return (

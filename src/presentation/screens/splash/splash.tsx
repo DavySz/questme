@@ -1,5 +1,5 @@
 import { ScreenTemplate, Text } from "@presentation/components";
-import LogoIcon from "@presentation/assets/logo-icon.svg";
+import LogoIcon from "@presentation/assets/icons/logo-icon.svg";
 import { Content } from "./splash.styles";
 
 export const Splash = (): ReturnType<React.FC> => {

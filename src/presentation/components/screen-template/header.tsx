@@ -1,7 +1,7 @@
 import { Text } from "../text";
 import { HeaderContainer, Wrapper, getIconColor, getTextColor } from "./styles";
 import { IScreenTemplateHeader } from "./types";
-import ArrowLeftIcon from "@presentation/assets/arrow-left-icon.svg";
+import ArrowLeftIcon from "@presentation/assets/icons/arrow-left-icon.svg";
 import { Button } from "../button";
 import { useTheme } from "styled-components/native";
 import { TTheme } from "@presentation/styles";
