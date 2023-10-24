@@ -15,7 +15,12 @@ export const ButtonRoot = ({
   });
 
   return (
-    <Button {...rest} variant={variant} full={full}>
+    <Button
+      {...rest}
+      full={full}
+      variant={variant}
+      testID="button-root-wrapper"
+    >
       {childrenWithProps}
     </Button>
   );

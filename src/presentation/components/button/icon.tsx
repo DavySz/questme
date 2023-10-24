@@ -13,5 +13,9 @@ export const ButtonIcon = ({
     return <Icon testID="icon-without-color" />;
   };
 
-  return <IconWrapper side={side}>{renderIcon()}</IconWrapper>;
+  return (
+    <IconWrapper side={side} testID="icon-wrapper">
+      {renderIcon()}
+    </IconWrapper>
+  );
 };
