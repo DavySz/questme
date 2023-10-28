@@ -6,6 +6,18 @@ import { ThemeProvider } from "styled-components/native";
 
 describe("ScreenTemplate", () => {
   describe("ScreenTemplate.Root", () => {
+    test("Should render without errors", () => {
+      const tree = render(
+        <ThemeProvider theme={theme}>
+          <ScreenTemplate.Root>
+            <Text>any-text</Text>
+          </ScreenTemplate.Root>
+        </ThemeProvider>
+      );
+
+      expect(tree).toMatchSnapshot();
+    });
+
     test("Should render correct children", () => {
       const { getByText } = render(
         <ThemeProvider theme={theme}>

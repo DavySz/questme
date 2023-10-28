@@ -15,7 +15,8 @@ function ProvidersWrapper({ children }) {
 describe("Button", () => {
   describe("Button.Root", () => {
     test("Should render Button.Root without errors", () => {
-      render(<View />, { wrapper: ProvidersWrapper });
+      const tree = render(<View />, { wrapper: ProvidersWrapper }).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 

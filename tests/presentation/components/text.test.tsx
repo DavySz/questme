@@ -4,6 +4,22 @@ import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "styled-components/native";
 
 describe("Text", () => {
+  test("Should render without errors", () => {
+    const tree = render(
+      <ThemeProvider theme={theme}>
+        <Text.Root
+          align="center"
+          color="company-facebook"
+          variant="body-large-medium"
+        >
+          any-text
+        </Text.Root>
+      </ThemeProvider>
+    );
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test("Should align text center if prop align center is passed", () => {
     const { getByText } = render(
       <ThemeProvider theme={theme}>

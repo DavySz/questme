@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenTemplate ScreenTemplate.Root Should render without errors 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#6A5AE0",
+      "flexBasis": 0,
+      "flexGrow": 1,
+      "flexShrink": 1,
+    }
+  }
+  testID="default-container"
+  variant="primary"
+>
+  <Text
+    variant="primary"
+  >
+    any-text
+  </Text>
+</View>
+`;

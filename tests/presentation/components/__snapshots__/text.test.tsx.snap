@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Should render without errors 1`] = `
+<Text
+  align="center"
+  color="company-facebook"
+  style={
+    {
+      "color": "#0056B2",
+      "fontFamily": "Rubik_500Medium",
+      "fontSize": 18,
+      "lineHeight": 24,
+      "textAlign": "center",
+    }
+  }
+  variant="body-large-medium"
+>
+  any-text
+</Text>
+`;

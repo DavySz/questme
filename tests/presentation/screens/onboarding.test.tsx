@@ -6,6 +6,7 @@ import { theme } from "@presentation/styles";
 import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "styled-components/native";
 import Illustration from "@presentation/assets/illustrations/onboarding-first-illustration.svg";
+import { OnboardingContainer } from "@presentation/screens";
 
 const mockSlides: ISlide[] = [
   {
@@ -74,6 +75,17 @@ describe("Onboarding", () => {
 
       const flatList = getByTestId("slides-list");
       expect(flatList.props.data.length).toBe(mockSlides.length);
+    });
+  });
+
+  describe("Onboarding Container", () => {
+    test("Should render onboarding container without errors", () => {
+      const tree = render(
+        <ThemeProvider theme={theme}>
+          <OnboardingContainer />
+        </ThemeProvider>
+      ).toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 });
