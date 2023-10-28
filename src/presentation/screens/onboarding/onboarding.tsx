@@ -7,14 +7,15 @@ import {
   ImageWrapper,
   ScrollArea,
 } from "./onboarding.styles";
-import { slides } from "./slides";
 import { OnboardingDot } from "./onboarding.dot";
 import { FlatList } from "react-native";
-import { IOnboarding, ISlide } from "./types";
+import { IOnboarding, ISlide, OnboardingRef } from "./types";
 import React from "react";
 
 export const Onboarding = React.forwardRef(
-  ({ currentIndex, updateCurrentSlideIndex }: IOnboarding, ref: any) => {
+  (props: IOnboarding, ref: OnboardingRef) => {
+    const { currentIndex, updateCurrentSlideIndex, slides } = props;
+
     const renderDots = () => {
       return (
         <Row>
@@ -46,6 +47,8 @@ export const Onboarding = React.forwardRef(
             horizontal
             data={slides}
             pagingEnabled
+            bounces={false}
+            testID="slides-list"
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item) => String(item.id)}
             renderItem={({ item }) => renderSlide(item)}
@@ -57,7 +60,7 @@ export const Onboarding = React.forwardRef(
               {slides[currentIndex].description}
             </Text.Root>
             <AuthWrapper>
-              <Button.Root>
+              <Button.Root variant="primary">
                 <Button.Text>Sign Up</Button.Text>
               </Button.Root>
               <Text.Root variant="body-normal-regular" color="neutral-gey-2">

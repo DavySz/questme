@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
-import { NativeScrollEvent, NativeSyntheticEvent } from "react-native";
+import {
+  FlatList,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+} from "react-native";
 
 export interface ISlide {
   description: string;
@@ -16,4 +20,7 @@ export type TChange = NativeSyntheticEvent<NativeScrollEvent>;
 export interface IOnboarding {
   updateCurrentSlideIndex: (e: TChange) => void;
   currentIndex: number;
+  slides: ISlide[];
 }
+
+export type OnboardingRef = React.LegacyRef<FlatList<ISlide>>;

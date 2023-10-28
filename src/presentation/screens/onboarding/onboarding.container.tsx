@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Onboarding } from "./onboarding";
 import { FlatList, useWindowDimensions } from "react-native";
 import { TChange } from "./types";
+import { slides } from "./slides";
 
 export const OnboardingContainer = (): ReturnType<React.FC> => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,6 +20,7 @@ export const OnboardingContainer = (): ReturnType<React.FC> => {
       updateCurrentSlideIndex={updateCurrentSlideIndex}
       currentIndex={currentIndex}
       ref={slidesRef}
+      slides={slides}
     />
   );
 };
