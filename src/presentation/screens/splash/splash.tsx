@@ -8,7 +8,7 @@ export const Splash = (): ReturnType<React.FC> => {
       <Content>
         <LogoIcon />
         <Text.Root color="neutral-white" variant="heading-3">
-          Questme
+          Queezy
         </Text.Root>
       </Content>
     </ScreenTemplate.Root>
