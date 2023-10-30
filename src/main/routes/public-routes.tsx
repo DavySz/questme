@@ -6,6 +6,7 @@ import {
 } from "@react-navigation/native-stack";
 import { HomeContainer } from "@presentation/screens";
 import {
+  MakeLoginScreen,
   MakeSplashScreen,
   MakeInitialScreen,
   MakeOnboardingScreen,
@@ -19,10 +20,11 @@ const screenOptions: NativeStackNavigationOptions = {
 
 export const PublicRoutes = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptions} initialRouteName="initial">
+    <Stack.Navigator screenOptions={screenOptions} initialRouteName="login">
       <Stack.Screen name="splash" component={MakeSplashScreen} />
       <Stack.Screen name="onboarding" component={MakeOnboardingScreen} />
       <Stack.Screen name="initial" component={MakeInitialScreen} />
+      <Stack.Screen name="login" component={MakeLoginScreen} />
       <Stack.Screen name="home" component={HomeContainer} />
     </Stack.Navigator>
   );
