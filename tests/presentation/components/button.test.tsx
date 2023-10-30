@@ -1,7 +1,6 @@
 import { Button } from "@presentation/components";
 import { theme } from "@presentation/styles";
 import { render } from "@testing-library/react-native";
-import { View } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import GoogleIcon from "@presentation/assets/icons/google-icon.svg";
 
@@ -15,7 +14,13 @@ function ProvidersWrapper({ children }) {
 describe("Button", () => {
   describe("Button.Root", () => {
     test("Should render Button.Root without errors", () => {
-      const tree = render(<View />, { wrapper: ProvidersWrapper }).toJSON();
+      const tree = render(
+        <ThemeProvider theme={theme}>
+          <Button.Root variant="google">
+            <Button.Text>any-text</Button.Text>
+          </Button.Root>
+        </ThemeProvider>
+      ).toJSON();
       expect(tree).toMatchSnapshot();
     });
   });

@@ -52,8 +52,19 @@ exports[`Button Button.Root Should render Button.Root without errors 1`] = `
   }
   testID="button-root-wrapper"
 >
-  <View
-    variant="google"
-  />
+  <Text
+    color="neutral-black"
+    style={
+      {
+        "color": "#0C092A",
+        "fontFamily": "Rubik_500Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      }
+    }
+    variant="body-normal-medium"
+  >
+    any-text
+  </Text>
 </View>
 `;

@@ -210,7 +210,7 @@ exports[`Splash Should render without errors 1`] = `
       }
       variant="heading-3"
     >
-      Questme
+      Queezy
     </Text>
   </View>
 </View>
