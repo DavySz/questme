@@ -24,5 +24,9 @@ export const InputRoot = ({
     },
   });
 
-  return <InputWrapper isFocused={isFocused}>{childrenWithProps}</InputWrapper>;
+  return (
+    <InputWrapper isFocused={isFocused} testID="input-wrapper">
+      {childrenWithProps}
+    </InputWrapper>
+  );
 };

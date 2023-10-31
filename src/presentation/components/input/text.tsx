@@ -6,5 +6,12 @@ export const InputText = ({
   handleFocus,
   ...rest
 }: IInputText): ReturnType<React.FC<IInputText>> => {
-  return <CustomInput {...rest} onBlur={handleBlur} onFocus={handleFocus} />;
+  return (
+    <CustomInput
+      {...rest}
+      onBlur={handleBlur}
+      onFocus={handleFocus}
+      testID="custom-input"
+    />
+  );
 };
