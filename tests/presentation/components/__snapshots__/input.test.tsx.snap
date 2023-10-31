@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Should render input without errors 1`] = `
+[
+  <View
+    style={
+      {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <Text
+      color="neutral-black"
+      style={
+        {
+          "color": "#0C092A",
+          "fontFamily": "Rubik_400Regular",
+          "fontSize": 14,
+          "lineHeight": 20,
+        }
+      }
+      variant="body-small-regular"
+    >
+      test-label
+    </Text>
+  </View>,
+  <View
+    isFocused={false}
+    style={
+      {
+        "backgroundColor": "#FFF",
+        "borderBottomLeftRadius": 20,
+        "borderBottomRightRadius": 20,
+        "borderColor": "#EFEEFC",
+        "borderStyle": "solid",
+        "borderTopLeftRadius": 20,
+        "borderTopRightRadius": 20,
+        "borderWidth": 2,
+        "flexDirection": "row",
+        "gap": 16,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "width": "100%",
+      }
+    }
+    testID="input-wrapper"
+  >
+    <SvgMock />
+    <TextInput
+      onBlur={[Function]}
+      onFocus={[Function]}
+      style={
+        {
+          "fontFamily": "Rubik_400Regular",
+          "fontSize": 16,
+          "width": "100%",
+        }
+      }
+      testID="custom-input"
+    />
+  </View>,
+]
+`;
