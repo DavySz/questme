@@ -30,7 +30,7 @@ export const Login = (): ReturnType<React.FC> => {
           <ScreenTemplate.Header goBack={() => console.log("go-back")}>
             Login
           </ScreenTemplate.Header>
-          <Content testID="login-screen">
+          <Content testID="login-screen-content">
             <ButtonWrapper>
               <Button.Root variant="google">
                 <Button.Icon icon={GoogleIcon} side="left" />
