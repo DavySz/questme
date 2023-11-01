@@ -18,7 +18,12 @@ export const ScreenTemplateHeader = ({
 
     return (
       <Wrapper>
-        <Button.Root variant="tertiary" onPress={goBack} full={false}>
+        <Button.Root
+          testID="go-back-button"
+          variant="tertiary"
+          onPress={goBack}
+          full={false}
+        >
           <Button.Icon
             color={getIconColor(theme as TTheme, variant)}
             icon={ArrowLeftIcon}
