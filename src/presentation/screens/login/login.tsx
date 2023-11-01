@@ -21,13 +21,16 @@ import {
 } from "./login.styles";
 import { Input } from "@presentation/components/input";
 import { Keyboard, TouchableWithoutFeedback } from "react-native";
+import { ILogin } from "./types";
 
-export const Login = (): ReturnType<React.FC> => {
+export const Login = ({
+  handleGoBack,
+}: ILogin): ReturnType<React.FC<ILogin>> => {
   return (
     <KeyboardSafeArea>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScreenTemplate.Root variant="secondary">
-          <ScreenTemplate.Header goBack={() => console.log("go-back")}>
+          <ScreenTemplate.Header goBack={handleGoBack}>
             Login
           </ScreenTemplate.Header>
           <Content testID="login-screen-content">
