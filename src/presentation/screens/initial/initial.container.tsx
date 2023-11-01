@@ -10,5 +10,14 @@ export const InitialContainer = (): ReturnType<React.FC> => {
     navigation.navigate("login");
   };
 
-  return <Initial handleGoToLoginScreen={handleGoToLoginScreen} />;
+  const handleGoToSignUpScreen = () => {
+    navigation.navigate("sign-up");
+  };
+
+  return (
+    <Initial
+      handleGoToLoginScreen={handleGoToLoginScreen}
+      handleGoToSignUpScreen={handleGoToSignUpScreen}
+    />
+  );
 };

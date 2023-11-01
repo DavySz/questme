@@ -13,6 +13,7 @@ import { IInitial } from "./types";
 
 export const Initial = ({
   handleGoToLoginScreen,
+  handleGoToSignUpScreen,
 }: IInitial): ReturnType<React.FC<IInitial>> => {
   return (
     <ScreenTemplate.Root variant="tertiary">
@@ -44,7 +45,11 @@ export const Initial = ({
             <Button.Root onPress={handleGoToLoginScreen} testID="button-login">
               <Button.Text>Login</Button.Text>
             </Button.Root>
-            <Button.Root variant="secondary">
+            <Button.Root
+              onPress={handleGoToSignUpScreen}
+              testID="button-sign-up"
+              variant="secondary"
+            >
               <Button.Text>Create an account</Button.Text>
             </Button.Root>
           </ButtonWrapper>

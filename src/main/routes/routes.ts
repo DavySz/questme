@@ -1,8 +1,9 @@
 import {
-  MakeInitialScreen,
   MakeLoginScreen,
-  MakeOnboardingScreen,
+  MakeSignUpScreen,
   MakeSplashScreen,
+  MakeInitialScreen,
+  MakeOnboardingScreen,
 } from "@main/factories/screens";
 import { HomeContainer } from "@presentation/screens";
 
@@ -26,5 +27,9 @@ export const publicRoutes = [
   {
     name: "home",
     component: HomeContainer,
+  },
+  {
+    name: "sign-up",
+    component: MakeSignUpScreen,
   },
 ];
