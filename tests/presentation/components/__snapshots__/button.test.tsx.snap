@@ -50,7 +50,6 @@ exports[`Button Button.Root Should render Button.Root without errors 1`] = `
       "width": "100%",
     }
   }
-  testID="button-root-wrapper"
 >
   <Text
     color="neutral-black"

@@ -1,36 +1,30 @@
 import { Text } from "@presentation/components";
-import { theme } from "@presentation/styles";
-import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "styled-components/native";
+import { customRender } from "../../utils/custom-render";
 
 describe("Text", () => {
   test("Should render without errors", () => {
-    const tree = render(
-      <ThemeProvider theme={theme}>
-        <Text.Root
-          align="center"
-          color="company-facebook"
-          variant="body-large-medium"
-        >
-          any-text
-        </Text.Root>
-      </ThemeProvider>
+    const tree = customRender(
+      <Text.Root
+        align="center"
+        color="company-facebook"
+        variant="body-large-medium"
+      >
+        any-text
+      </Text.Root>
     );
 
     expect(tree).toMatchSnapshot();
   });
 
   test("Should align text center if prop align center is passed", () => {
-    const { getByText } = render(
-      <ThemeProvider theme={theme}>
-        <Text.Root
-          align="center"
-          color="company-facebook"
-          variant="body-large-medium"
-        >
-          any-text
-        </Text.Root>
-      </ThemeProvider>
+    const { getByText } = customRender(
+      <Text.Root
+        align="center"
+        color="company-facebook"
+        variant="body-large-medium"
+      >
+        any-text
+      </Text.Root>
     );
     const text = getByText("any-text");
 

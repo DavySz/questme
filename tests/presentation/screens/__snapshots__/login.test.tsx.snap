@@ -97,7 +97,7 @@ exports[`Login Should render without errors 1`] = `
               "paddingTop": 16,
             }
           }
-          testID="button-root-wrapper"
+          testID="go-back-button"
         >
           <View
             side="none"
@@ -141,6 +141,7 @@ exports[`Login Should render without errors 1`] = `
           "flexShrink": 1,
         }
       }
+      testID="login-screen"
       variant="secondary"
     >
       <View>
@@ -204,7 +205,6 @@ exports[`Login Should render without errors 1`] = `
                 "width": "100%",
               }
             }
-            testID="button-root-wrapper"
           >
             <View
               side="left"
@@ -280,7 +280,6 @@ exports[`Login Should render without errors 1`] = `
                 "width": "100%",
               }
             }
-            testID="button-root-wrapper"
           >
             <View
               side="left"
@@ -560,7 +559,6 @@ exports[`Login Should render without errors 1`] = `
                 "width": "100%",
               }
             }
-            testID="button-root-wrapper"
           >
             <Text
               color="neutral-white"
@@ -623,7 +621,6 @@ exports[`Login Should render without errors 1`] = `
                 "width": "100%",
               }
             }
-            testID="button-root-wrapper"
           >
             <Text
               color="primary"

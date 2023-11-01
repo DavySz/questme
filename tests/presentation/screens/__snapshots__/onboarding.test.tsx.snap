@@ -512,7 +512,6 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
               "width": "100%",
             }
           }
-          testID="button-root-wrapper"
         >
           <Text
             color="neutral-white"

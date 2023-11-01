@@ -1,25 +1,15 @@
 import { Button } from "@presentation/components";
-import { theme } from "@presentation/styles";
-import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "styled-components/native";
 import GoogleIcon from "@presentation/assets/icons/google-icon.svg";
+import { customRender } from "../../utils/custom-render";
+import { theme } from "@presentation/styles";
 
-function ProvidersWrapper({ children }) {
-  return (
-    <ThemeProvider theme={theme}>
-      <Button.Root variant="google">{children}</Button.Root>
-    </ThemeProvider>
-  );
-}
 describe("Button", () => {
   describe("Button.Root", () => {
     test("Should render Button.Root without errors", () => {
-      const tree = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root variant="google">
-            <Button.Text>any-text</Button.Text>
-          </Button.Root>
-        </ThemeProvider>
+      const tree = customRender(
+        <Button.Root variant="google">
+          <Button.Text>any-text</Button.Text>
+        </Button.Root>
       ).toJSON();
       expect(tree).toMatchSnapshot();
     });
@@ -27,15 +17,19 @@ describe("Button", () => {
 
   describe("Button.Text", () => {
     test("Should render Button.Text without errors", () => {
-      render(<Button.Text>any-text</Button.Text>, {
-        wrapper: ProvidersWrapper,
-      });
+      customRender(
+        <Button.Root variant="google">
+          <Button.Text>any-text</Button.Text>
+        </Button.Root>
+      );
     });
 
     test("Should render correct children text", () => {
-      const { getByText } = render(<Button.Text>any-text</Button.Text>, {
-        wrapper: ProvidersWrapper,
-      });
+      const { getByText } = customRender(
+        <Button.Root variant="google">
+          <Button.Text>any-text</Button.Text>
+        </Button.Root>
+      );
 
       expect(getByText("any-text")).toBeTruthy();
     });
@@ -43,11 +37,11 @@ describe("Button", () => {
 
   describe("Button.Icon", () => {
     test("Should render Button.Icon without errors", () => {
-      render(<Button.Icon icon={GoogleIcon} side="left" />);
+      customRender(<Button.Icon icon={GoogleIcon} side="left" />);
     });
 
     test("Should render Button.Icon with color", async () => {
-      const { getByTestId } = render(
+      const { getByTestId } = customRender(
         <Button.Icon icon={GoogleIcon} side="left" color="#000" />
       );
 
@@ -55,7 +49,7 @@ describe("Button", () => {
     });
 
     test("Should render Button.Icon without color", async () => {
-      const { getByTestId } = render(
+      const { getByTestId } = customRender(
         <Button.Icon icon={GoogleIcon} side="left" />
       );
 
@@ -63,7 +57,7 @@ describe("Button", () => {
     });
 
     test("Should add margin right of 16px when Button.Icon receive left prop", async () => {
-      const { getByTestId } = render(
+      const { getByTestId } = customRender(
         <Button.Icon icon={GoogleIcon} side="left" />
       );
 
@@ -74,7 +68,7 @@ describe("Button", () => {
     });
 
     test("Should add margin left of 16px when Button.Icon receive right prop", async () => {
-      const { getByTestId } = render(
+      const { getByTestId } = customRender(
         <Button.Icon icon={GoogleIcon} side="right" />
       );
 
@@ -85,7 +79,7 @@ describe("Button", () => {
     });
 
     test("Should not add margin when Button.Icon receive none prop", async () => {
-      const { getByTestId } = render(
+      const { getByTestId } = customRender(
         <Button.Icon icon={GoogleIcon} side="none" />
       );
 
@@ -99,25 +93,21 @@ describe("Button", () => {
 
   describe("Button.*", () => {
     test("Should render all button parts without errors", () => {
-      const { getByText } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root variant="google">
-            <Button.Text>any-text</Button.Text>
-            <Button.Icon icon={GoogleIcon} side="right" />
-          </Button.Root>
-        </ThemeProvider>
+      const { getByText } = customRender(
+        <Button.Root variant="google">
+          <Button.Text>any-text</Button.Text>
+          <Button.Icon icon={GoogleIcon} side="right" />
+        </Button.Root>
       );
 
       expect(getByText("any-text")).toBeTruthy();
     });
 
     test("Should render button with correct background color primary variant by default", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root>
-            <Button.Icon icon={GoogleIcon} side="right" />
-          </Button.Root>
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <Button.Root testID="button-root-wrapper">
+          <Button.Icon icon={GoogleIcon} side="right" />
+        </Button.Root>
       );
 
       const button = getByTestId("button-root-wrapper");
@@ -127,12 +117,10 @@ describe("Button", () => {
     });
 
     test("Should render button with correct background color when variant is passed", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root variant="tertiary">
-            <Button.Icon icon={GoogleIcon} side="right" />
-          </Button.Root>
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <Button.Root variant="tertiary" testID="button-root-wrapper">
+          <Button.Icon icon={GoogleIcon} side="right" />
+        </Button.Root>
       );
 
       const button = getByTestId("button-root-wrapper");
@@ -142,12 +130,10 @@ describe("Button", () => {
     });
 
     test("Should render button with 100% width if full prop is passed", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root>
-            <Button.Icon icon={GoogleIcon} side="right" />
-          </Button.Root>
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <Button.Root testID="button-root-wrapper">
+          <Button.Icon icon={GoogleIcon} side="right" />
+        </Button.Root>
       );
 
       const button = getByTestId("button-root-wrapper");
@@ -157,12 +143,10 @@ describe("Button", () => {
     });
 
     test("Should render button with content width if full prop is not passed", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <Button.Root full={false}>
-            <Button.Icon icon={GoogleIcon} side="right" />
-          </Button.Root>
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <Button.Root full={false} testID="button-root-wrapper">
+          <Button.Icon icon={GoogleIcon} side="right" />
+        </Button.Root>
       );
 
       const button = getByTestId("button-root-wrapper");
