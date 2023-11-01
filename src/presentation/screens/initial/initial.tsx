@@ -9,8 +9,11 @@ import {
   TextWrapper,
   ButtonWrapper,
 } from "./initial.styles";
+import { IInitial } from "./types";
 
-export const Initial = () => {
+export const Initial = ({
+  handleGoToLoginScreen,
+}: IInitial): ReturnType<React.FC<IInitial>> => {
   return (
     <ScreenTemplate.Root variant="tertiary">
       <Content>
@@ -38,7 +41,7 @@ export const Initial = () => {
             </Text.Root>
           </TextWrapper>
           <ButtonWrapper>
-            <Button.Root>
+            <Button.Root onPress={handleGoToLoginScreen} testID="button-login">
               <Button.Text>Login</Button.Text>
             </Button.Root>
             <Button.Root variant="secondary">
