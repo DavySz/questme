@@ -27,7 +27,7 @@ export const Login = ({
   handleGoBack,
 }: ILogin): ReturnType<React.FC<ILogin>> => {
   return (
-    <KeyboardSafeArea>
+    <KeyboardSafeArea testID="key-board-safe-area" behavior="height">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScreenTemplate.Root variant="secondary">
           <ScreenTemplate.Header goBack={handleGoBack}>

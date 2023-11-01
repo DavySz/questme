@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { Platform, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 
 export const Content = styled(ScrollView).attrs({
   contentContainerStyle: { padding: 16 },
@@ -35,8 +35,6 @@ export const Form = styled.View`
 
 export const InputWrapper = styled.View``;
 
-export const KeyboardSafeArea = styled.KeyboardAvoidingView.attrs({
-  behavior: Platform.OS === "ios" ? "padding" : "height",
-})`
+export const KeyboardSafeArea = styled.KeyboardAvoidingView`
   flex: 1;
 `;
