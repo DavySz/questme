@@ -16,7 +16,7 @@ export const Initial = ({
 }: IInitial): ReturnType<React.FC<IInitial>> => {
   return (
     <ScreenTemplate.Root variant="tertiary">
-      <Content>
+      <Content testID="initial-screen-content">
         <Header>
           <LogoIcon />
           <Text.Root color="neutral-white" variant="heading-3">
