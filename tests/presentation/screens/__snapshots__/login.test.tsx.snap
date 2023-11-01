@@ -141,7 +141,7 @@ exports[`Login Should render without errors 1`] = `
           "flexShrink": 1,
         }
       }
-      testID="login-screen"
+      testID="login-screen-content"
       variant="secondary"
     >
       <View>
