@@ -1,16 +1,9 @@
 import { SplashContainer } from "@presentation/screens/splash/splash.container";
-import { theme } from "@presentation/styles";
-import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "styled-components/native";
+import { customRender } from "../../utils/custom-render";
 
 describe("Splash", () => {
   test("Should render without errors", () => {
-    const tree = render(
-      <ThemeProvider theme={theme}>
-        <SplashContainer />
-      </ThemeProvider>
-    );
-
+    const tree = customRender(<SplashContainer />);
     expect(tree).toMatchSnapshot();
   });
 });

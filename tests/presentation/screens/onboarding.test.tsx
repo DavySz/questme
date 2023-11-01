@@ -2,11 +2,9 @@ import { Onboarding } from "@presentation/screens/onboarding/onboarding";
 import { OnboardingDot } from "@presentation/screens/onboarding/onboarding.dot";
 import { slides } from "@presentation/screens/onboarding/slides";
 import { ISlide } from "@presentation/screens/onboarding/types";
-import { theme } from "@presentation/styles";
-import { render } from "@testing-library/react-native";
-import { ThemeProvider } from "styled-components/native";
 import Illustration from "@presentation/assets/illustrations/onboarding-first-illustration.svg";
 import { OnboardingContainer } from "@presentation/screens";
+import { customRender } from "../../utils/custom-render";
 
 const mockSlides: ISlide[] = [
   {
@@ -27,13 +25,15 @@ const mockSlides: ISlide[] = [
 ];
 
 describe("Onboarding", () => {
+  describe("Onboarding Container", () => {
+    test("Should render onboarding container without errors", () => {
+      const tree = customRender(<OnboardingContainer />).toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
   describe("OnboardingDot", () => {
     test("Should render correct dot component when isSelected", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <OnboardingDot isSelected />
-        </ThemeProvider>
-      );
+      const { getByTestId } = customRender(<OnboardingDot isSelected />);
 
       const dotSelected = getByTestId("is-selected-dot");
 
@@ -41,10 +41,8 @@ describe("Onboarding", () => {
     });
 
     test("Should render correct dot component when isSelected is false", () => {
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <OnboardingDot isSelected={false} />
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <OnboardingDot isSelected={false} />
       );
 
       const dotSelected = getByTestId("is-not-selected-dot");
@@ -63,29 +61,16 @@ describe("Onboarding", () => {
     test("Should slides have 3 items in FlatList component", () => {
       const updateCurrentSlideIndexJest = jest.fn();
 
-      const { getByTestId } = render(
-        <ThemeProvider theme={theme}>
-          <Onboarding
-            currentIndex={0}
-            slides={mockSlides}
-            updateCurrentSlideIndex={updateCurrentSlideIndexJest}
-          />
-        </ThemeProvider>
+      const { getByTestId } = customRender(
+        <Onboarding
+          currentIndex={0}
+          slides={mockSlides}
+          updateCurrentSlideIndex={updateCurrentSlideIndexJest}
+        />
       );
 
       const flatList = getByTestId("slides-list");
       expect(flatList.props.data.length).toBe(mockSlides.length);
-    });
-  });
-
-  describe("Onboarding Container", () => {
-    test("Should render onboarding container without errors", () => {
-      const tree = render(
-        <ThemeProvider theme={theme}>
-          <OnboardingContainer />
-        </ThemeProvider>
-      ).toJSON();
-      expect(tree).toMatchSnapshot();
     });
   });
 });
