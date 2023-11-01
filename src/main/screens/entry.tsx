@@ -14,10 +14,8 @@ import {
 import { theme } from "@presentation/styles";
 import { AppRoutes } from "@main/routes/app-routes";
 import { StatusBar } from "react-native";
-import {
-  RotationGestureHandler,
-  TapGestureHandler,
-} from "react-native-gesture-handler";
+
+import { GestureWrapper } from "./styles";
 
 export const Entry = (): ReturnType<React.FC> => {
   SplashScreen.preventAutoHideAsync();
@@ -36,16 +34,14 @@ export const Entry = (): ReturnType<React.FC> => {
 
   return (
     <ThemeProvider theme={theme}>
-      <TapGestureHandler>
-        <RotationGestureHandler>
-          <StatusBar
-            translucent
-            barStyle="light-content"
-            backgroundColor="transparent"
-          />
-          <AppRoutes />
-        </RotationGestureHandler>
-      </TapGestureHandler>
+      <GestureWrapper>
+        <StatusBar
+          translucent
+          barStyle="light-content"
+          backgroundColor="transparent"
+        />
+        <AppRoutes />
+      </GestureWrapper>
     </ThemeProvider>
   );
 };
