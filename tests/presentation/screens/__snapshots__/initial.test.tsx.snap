@@ -346,7 +346,7 @@ exports[`Initial Should render without errors 1`] = `
               "width": "100%",
             }
           }
-          testID="button-root-wrapper"
+          testID="button-login"
         >
           <Text
             color="neutral-white"
@@ -409,7 +409,6 @@ exports[`Initial Should render without errors 1`] = `
               "width": "100%",
             }
           }
-          testID="button-root-wrapper"
         >
           <Text
             color="primary"
