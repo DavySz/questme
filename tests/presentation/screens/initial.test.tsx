@@ -2,8 +2,6 @@ import { InitialContainer } from "@presentation/screens";
 import { customRender, TestingPublicNavigator } from "../../utils";
 import { fireEvent, render } from "@testing-library/react-native";
 import { Initial } from "@presentation/screens/initial/initial";
-import { ThemeProvider } from "styled-components/native";
-import { theme } from "@presentation/styles";
 
 import React from "react";
 
@@ -28,9 +26,7 @@ describe("Initial", () => {
 
   test("Should navigate to login screen when login button is clicked", async () => {
     const { getByTestId, findByTestId } = render(
-      <ThemeProvider theme={theme}>
-        <TestingPublicNavigator currentRoute="initial" />
-      </ThemeProvider>
+      <TestingPublicNavigator currentRoute="initial" />
     );
 
     const loginButton = getByTestId("button-login");
