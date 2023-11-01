@@ -9,9 +9,11 @@
   },
   "collectCoverageFrom": [
     "<rootDir>/src/**/*.{ts,tsx}",
-    "!<rootDir>/src/main/**/*",
     "!<rootDir>/src/**/index.ts",
+    "!<rootDir>/src/main/**/*",
     "!**/types.{ts,tsx}",
-    "!**/assets/*"
-  ]
+    "!**/assets/*",
+    "!**/@types/*"
+  ],
+  "setupFiles": ["<rootDir>/tests/setup/jest-setup.js"]
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import "react-native-gesture-handler";
+
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components";
 import * as SplashScreen from "expo-splash-screen";
@@ -12,6 +14,10 @@ import {
 import { theme } from "@presentation/styles";
 import { AppRoutes } from "@main/routes/app-routes";
 import { StatusBar } from "react-native";
+import {
+  RotationGestureHandler,
+  TapGestureHandler,
+} from "react-native-gesture-handler";
 
 export const Entry = (): ReturnType<React.FC> => {
   SplashScreen.preventAutoHideAsync();
@@ -30,12 +36,16 @@ export const Entry = (): ReturnType<React.FC> => {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        translucent
-        barStyle="light-content"
-        backgroundColor="transparent"
-      />
-      <AppRoutes />
+      <TapGestureHandler>
+        <RotationGestureHandler>
+          <StatusBar
+            translucent
+            barStyle="light-content"
+            backgroundColor="transparent"
+          />
+          <AppRoutes />
+        </RotationGestureHandler>
+      </TapGestureHandler>
     </ThemeProvider>
   );
 };
