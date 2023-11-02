@@ -14,7 +14,7 @@ export const SignUp = ({
       <ScreenTemplate.Header goBack={handleGoBack}>
         Sign Up
       </ScreenTemplate.Header>
-      <Content>
+      <Content testID="sign-up-screen-content">
         <Main>
           <Button.Root variant="google">
             <Button.Icon icon={GoogleIcon} side="left" />
