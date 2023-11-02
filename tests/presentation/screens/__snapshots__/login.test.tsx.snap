@@ -126,7 +126,7 @@ exports[`Login Should render without errors 1`] = `
     <RCTScrollView
       contentContainerStyle={
         {
-          "padding": 16,
+          "padding": 24,
         }
       }
       showsVerticalScrollIndicator={false}

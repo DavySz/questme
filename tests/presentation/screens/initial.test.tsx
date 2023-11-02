@@ -13,9 +13,13 @@ describe("Initial", () => {
 
   test("Should call one time mocked method when button is clicked", () => {
     const handleGoToLoginScreenMock = jest.fn();
+    const handleGoToSignUpScreenMock = jest.fn();
 
     const { getByTestId } = customRender(
-      <Initial handleGoToLoginScreen={handleGoToLoginScreenMock} />
+      <Initial
+        handleGoToSignUpScreen={handleGoToSignUpScreenMock}
+        handleGoToLoginScreen={handleGoToLoginScreenMock}
+      />
     );
 
     const loginButton = getByTestId("button-login");
@@ -33,6 +37,18 @@ describe("Initial", () => {
     fireEvent.press(loginButton);
 
     const loginScreen = await findByTestId("login-screen-content");
+    expect(loginScreen).toBeTruthy();
+  });
+
+  test("Should navigate to sign-up screen when sign-up button is clicked", async () => {
+    const { getByTestId, findByTestId } = render(
+      <TestingPublicNavigator currentRoute="initial" />
+    );
+
+    const loginButton = getByTestId("button-sign-up");
+    fireEvent.press(loginButton);
+
+    const loginScreen = await findByTestId("sign-up-screen-content");
     expect(loginScreen).toBeTruthy();
   });
 });
