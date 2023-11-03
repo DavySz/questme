@@ -5,6 +5,7 @@ import {
   Divider,
   ScreenTemplate,
   Text,
+  Input,
 } from "@presentation/components";
 import FacebookIcon from "@presentation/assets/icons/facebook-icon.svg";
 import GoogleIcon from "@presentation/assets/icons/google-icon.svg";
@@ -19,7 +20,6 @@ import {
   KeyboardSafeArea,
   Row,
 } from "./login.styles";
-import { Input } from "@presentation/components/input";
 import { Keyboard, TouchableWithoutFeedback } from "react-native";
 import { ILogin } from "./types";
 
