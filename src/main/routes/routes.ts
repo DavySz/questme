@@ -4,10 +4,11 @@ import {
   MakeSplashScreen,
   MakeInitialScreen,
   MakeOnboardingScreen,
+  MakeResetPasswordScreen,
 } from "@main/factories/screens";
-import { HomeContainer } from "@presentation/screens";
+import { IRoute } from "./types";
 
-export const publicRoutes = [
+export const publicRoutes: IRoute[] = [
   {
     name: "login",
     component: MakeLoginScreen,
@@ -25,11 +26,11 @@ export const publicRoutes = [
     component: MakeInitialScreen,
   },
   {
-    name: "home",
-    component: HomeContainer,
-  },
-  {
     name: "sign-up",
     component: MakeSignUpScreen,
+  },
+  {
+    name: "reset-password",
+    component: MakeResetPasswordScreen,
   },
 ];
