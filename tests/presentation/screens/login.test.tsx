@@ -18,8 +18,8 @@ describe("Login", () => {
     const goBackButton = getByTestId("go-back-button");
     fireEvent.press(goBackButton);
 
-    const loginScreen = await findByTestId("initial-screen-content");
+    const previousScreen = await findByTestId("initial-screen-content");
 
-    expect(loginScreen).toBeTruthy();
+    expect(previousScreen).toBeTruthy();
   });
 });
