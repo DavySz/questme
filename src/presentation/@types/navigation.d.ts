@@ -4,6 +4,7 @@ export declare global {
       login: undefined;
       initial: undefined;
       "sign-up": undefined;
+      "reset-password": undefined;
     }
   }
 }
