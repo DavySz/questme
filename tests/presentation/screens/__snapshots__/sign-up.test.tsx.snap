@@ -612,6 +612,7 @@ exports[`SignUp Should render screen without errors 1`] = `
                 "width": "100%",
               }
             }
+            testID="button-reset-password"
           >
             <Text
               color="primary"

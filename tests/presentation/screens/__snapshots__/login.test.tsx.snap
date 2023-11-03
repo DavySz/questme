@@ -612,6 +612,7 @@ exports[`Login Should render without errors 1`] = `
                 "width": "100%",
               }
             }
+            testID="button-reset-password"
           >
             <Text
               color="primary"

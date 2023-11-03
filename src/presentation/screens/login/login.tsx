@@ -75,6 +75,7 @@ export const Login = ({
               </Button.Root>
               <Button.Root
                 onPress={handleGoToResetPasswordScreen}
+                testID="button-reset-password"
                 variant="tertiary"
               >
                 <Button.Text>Forgot password?</Button.Text>
