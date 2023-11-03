@@ -5,13 +5,11 @@ import { INewPassword } from "./types";
 import LockIcon from "@presentation/assets/icons/lock-icon.svg";
 
 export const NewPassword = ({
-  handleGoBack,
+  handleGoToInitial,
 }: INewPassword): ReturnType<React.FC<INewPassword>> => {
   return (
     <ScreenTemplate.Root variant="secondary">
-      <ScreenTemplate.Header goBack={handleGoBack}>
-        New Password
-      </ScreenTemplate.Header>
+      <ScreenTemplate.Header>New Password</ScreenTemplate.Header>
       <Content>
         <Text.Root variant="body-normal-regular" color="neutral-gey-2">
           Your new password must be different from previous used passwords.
@@ -32,7 +30,7 @@ export const NewPassword = ({
             </Input.Root>
           </InputWrapper>
         </Main>
-        <Button.Root>
+        <Button.Root onPress={handleGoToInitial} testID="button-reset-password">
           <Button.Text>Reset Password</Button.Text>
         </Button.Root>
       </Content>

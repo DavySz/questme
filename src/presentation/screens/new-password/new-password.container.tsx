@@ -4,8 +4,8 @@ import { NewPassword } from "./new-password";
 export const NewPasswordContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
 
-  const handleGoBack = () => {
-    navigation.goBack();
+  const handleGoToInitial = () => {
+    navigation.navigate("initial");
   };
-  return <NewPassword handleGoBack={handleGoBack} />;
+  return <NewPassword handleGoToInitial={handleGoToInitial} />;
 };
