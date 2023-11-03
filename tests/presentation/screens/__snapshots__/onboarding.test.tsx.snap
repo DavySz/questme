@@ -512,6 +512,7 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
               "width": "100%",
             }
           }
+          testID="button-sign-up"
         >
           <Text
             color="neutral-white"
@@ -553,6 +554,7 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
                 "lineHeight": 24,
               }
             }
+            testID="button-login"
             variant="body-normal-medium"
           >
             Login

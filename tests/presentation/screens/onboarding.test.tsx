@@ -4,7 +4,8 @@ import { slides } from "@presentation/screens/onboarding/slides";
 import { ISlide } from "@presentation/screens/onboarding/types";
 import Illustration from "@presentation/assets/illustrations/onboarding-first-illustration.svg";
 import { OnboardingContainer } from "@presentation/screens";
-import { customRender } from "../../utils/custom-render";
+import { customRender, TestingPublicNavigator } from "../../utils";
+import { fireEvent, render } from "@testing-library/react-native";
 
 const mockSlides: ISlide[] = [
   {
@@ -60,17 +61,47 @@ describe("Onboarding", () => {
   describe("Onboarding", () => {
     test("Should slides have 3 items in FlatList component", () => {
       const updateCurrentSlideIndexJest = jest.fn();
+      const handleGoToSignUpScreenJest = jest.fn();
+      const handleGoToLoginScreenJest = jest.fn();
 
       const { getByTestId } = customRender(
         <Onboarding
           currentIndex={0}
           slides={mockSlides}
+          handleGoToLoginScreen={handleGoToLoginScreenJest}
+          handleGoToSignUpScreen={handleGoToSignUpScreenJest}
           updateCurrentSlideIndex={updateCurrentSlideIndexJest}
         />
       );
 
       const flatList = getByTestId("slides-list");
       expect(flatList.props.data.length).toBe(mockSlides.length);
+    });
+
+    test("Should navigate to sign up screen when button is clicked", async () => {
+      const { getByTestId, findByTestId } = render(
+        <TestingPublicNavigator currentRoute="onboarding" />
+      );
+
+      const buttonResetPassword = getByTestId("button-sign-up");
+      fireEvent.press(buttonResetPassword);
+
+      const resetPasswordScreen = await findByTestId("sign-up-screen-content");
+
+      expect(resetPasswordScreen).toBeTruthy();
+    });
+
+    test("Should navigate to login screen when button is clicked", async () => {
+      const { getByTestId, findByTestId } = render(
+        <TestingPublicNavigator currentRoute="onboarding" />
+      );
+
+      const buttonResetPassword = getByTestId("button-login");
+      fireEvent.press(buttonResetPassword);
+
+      const resetPasswordScreen = await findByTestId("login-screen-content");
+
+      expect(resetPasswordScreen).toBeTruthy();
     });
   });
 });

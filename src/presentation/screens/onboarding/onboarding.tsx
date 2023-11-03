@@ -66,7 +66,11 @@ export const Onboarding = React.forwardRef(
               {slides[currentIndex].description}
             </Text.Root>
             <AuthWrapper>
-              <Button.Root variant="primary" onPress={handleGoToSignUpScreen}>
+              <Button.Root
+                variant="primary"
+                testID="button-sign-up"
+                onPress={handleGoToSignUpScreen}
+              >
                 <Button.Text>Sign Up</Button.Text>
               </Button.Root>
               <Text.Root variant="body-normal-regular" color="neutral-gey-2">
@@ -74,6 +78,7 @@ export const Onboarding = React.forwardRef(
                 <Text.Root
                   onPress={handleGoToLoginScreen}
                   variant="body-normal-medium"
+                  testID="button-login"
                   color="primary"
                 >
                   Login
