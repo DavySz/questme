@@ -6,7 +6,7 @@ export const LoginContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
 
   const handleGoBack = () => {
-    navigation.navigate("initial");
+    navigation.goBack();
   };
 
   return <Login handleGoBack={handleGoBack} />;

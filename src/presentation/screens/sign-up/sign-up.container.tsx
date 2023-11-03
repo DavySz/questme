@@ -5,7 +5,7 @@ export const SignUpContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
 
   const handleGoBack = () => {
-    navigation.navigate("initial");
+    navigation.goBack();
   };
 
   return <SignUp handleGoBack={handleGoBack} />;

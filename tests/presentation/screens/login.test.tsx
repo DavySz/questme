@@ -9,8 +9,11 @@ describe("Login", () => {
 
   test("Should go back to the previous screen when go back button is pressed", async () => {
     const { getByTestId, findByTestId } = render(
-      <TestingPublicNavigator currentRoute="login" />
+      <TestingPublicNavigator currentRoute="initial" />
     );
+
+    const goToLoginButton = getByTestId("button-login");
+    fireEvent.press(goToLoginButton);
 
     const goBackButton = getByTestId("go-back-button");
     fireEvent.press(goBackButton);

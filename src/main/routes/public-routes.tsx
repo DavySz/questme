@@ -14,7 +14,10 @@ const screenOptions: NativeStackNavigationOptions = {
 
 export const PublicRoutes = () => {
   return (
-    <Stack.Navigator screenOptions={screenOptions} initialRouteName="initial">
+    <Stack.Navigator
+      screenOptions={screenOptions}
+      initialRouteName="onboarding"
+    >
       {publicRoutes.map(({ component, name }) => (
         <Stack.Screen name={name} component={component} key={name} />
       ))}
