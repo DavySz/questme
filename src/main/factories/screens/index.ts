@@ -4,3 +4,4 @@ export * from "./initial-factory";
 export * from "./login-factory";
 export * from "./sign-up-factory";
 export * from "./reset-password-factory";
+export * from "./new-password";
