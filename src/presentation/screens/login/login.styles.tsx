@@ -2,11 +2,9 @@ import styled from "styled-components/native";
 import { ScrollView } from "react-native";
 
 export const Content = styled(ScrollView).attrs({
-  contentContainerStyle: { padding: 24 },
+  contentContainerStyle: { padding: 24, flex: 1 },
   showsVerticalScrollIndicator: false,
-})`
-  flex: 1;
-`;
+})``;
 
 export const ButtonWrapper = styled.View`
   gap: 16px;

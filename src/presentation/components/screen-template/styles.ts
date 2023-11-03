@@ -107,7 +107,7 @@ export const Wrapper = styled.View`
   position: absolute;
 
   top: ${8 + Math.round(Number(StatusBar.currentHeight))}px;
-  left: 24px;
+  left: 16px;
 `;
 
 export const Container = styled.View<IScreenTemplateRootStyles>`

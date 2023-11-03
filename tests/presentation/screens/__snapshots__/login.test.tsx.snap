@@ -42,7 +42,7 @@ exports[`Login Should render without errors 1`] = `
       <View
         style={
           {
-            "left": 24,
+            "left": 16,
             "position": "absolute",
             "top": 8,
           }
@@ -126,17 +126,12 @@ exports[`Login Should render without errors 1`] = `
     <RCTScrollView
       contentContainerStyle={
         {
+          "flex": 1,
           "padding": 24,
         }
       }
       showsVerticalScrollIndicator={false}
-      style={
-        {
-          "flexBasis": 0,
-          "flexGrow": 1,
-          "flexShrink": 1,
-        }
-      }
+      style={{}}
       testID="login-screen-content"
       variant="secondary"
     >
@@ -591,7 +586,7 @@ exports[`Login Should render without errors 1`] = `
             }
             accessible={true}
             collapsable={false}
-            focusable={false}
+            focusable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

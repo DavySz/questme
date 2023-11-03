@@ -2,11 +2,9 @@ import { ScrollView } from "react-native";
 import styled from "styled-components/native";
 
 export const Content = styled(ScrollView).attrs({
-  contentContainerStyle: { padding: 24, alignItems: "center" },
+  contentContainerStyle: { padding: 24, alignItems: "center", flex: 1 },
   showsVerticalScrollIndicator: false,
-})`
-  flex: 1;
-`;
+})``;
 
 export const KeyboardSafeArea = styled.KeyboardAvoidingView`
   flex: 1;
