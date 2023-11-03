@@ -14,7 +14,13 @@ import React from "react";
 
 export const Onboarding = React.forwardRef(
   (props: IOnboarding, ref: OnboardingRef) => {
-    const { currentIndex, updateCurrentSlideIndex, slides } = props;
+    const {
+      slides,
+      currentIndex,
+      handleGoToLoginScreen,
+      handleGoToSignUpScreen,
+      updateCurrentSlideIndex,
+    } = props;
 
     const renderDots = () => {
       return (
@@ -60,12 +66,16 @@ export const Onboarding = React.forwardRef(
               {slides[currentIndex].description}
             </Text.Root>
             <AuthWrapper>
-              <Button.Root variant="primary">
+              <Button.Root variant="primary" onPress={handleGoToSignUpScreen}>
                 <Button.Text>Sign Up</Button.Text>
               </Button.Root>
               <Text.Root variant="body-normal-regular" color="neutral-gey-2">
                 Already have an account?{" "}
-                <Text.Root variant="body-normal-medium" color="primary">
+                <Text.Root
+                  onPress={handleGoToLoginScreen}
+                  variant="body-normal-medium"
+                  color="primary"
+                >
                   Login
                 </Text.Root>
               </Text.Root>
