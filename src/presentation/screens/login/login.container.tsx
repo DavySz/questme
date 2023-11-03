@@ -9,5 +9,14 @@ export const LoginContainer = (): ReturnType<React.FC> => {
     navigation.goBack();
   };
 
-  return <Login handleGoBack={handleGoBack} />;
+  const handleGoToResetPasswordScreen = () => {
+    navigation.navigate("reset-password");
+  };
+
+  return (
+    <Login
+      handleGoBack={handleGoBack}
+      handleGoToResetPasswordScreen={handleGoToResetPasswordScreen}
+    />
+  );
 };

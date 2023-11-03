@@ -25,6 +25,7 @@ import { ILogin } from "./types";
 
 export const Login = ({
   handleGoBack,
+  handleGoToResetPasswordScreen,
 }: ILogin): ReturnType<React.FC<ILogin>> => {
   return (
     <KeyboardSafeArea testID="key-board-safe-area" behavior="height">
@@ -72,7 +73,10 @@ export const Login = ({
               <Button.Root>
                 <Button.Text>Login</Button.Text>
               </Button.Root>
-              <Button.Root variant="tertiary">
+              <Button.Root
+                onPress={handleGoToResetPasswordScreen}
+                variant="tertiary"
+              >
                 <Button.Text>Forgot password?</Button.Text>
               </Button.Root>
             </ButtonWrapper>
