@@ -4,8 +4,10 @@ import {
   MakeSplashScreen,
   MakeInitialScreen,
   MakeOnboardingScreen,
+  MakeNewPasswordScreen,
   MakeResetPasswordScreen,
 } from "@main/factories/screens";
+
 import { IRoute } from "./types";
 
 export const publicRoutes: IRoute[] = [
@@ -32,5 +34,9 @@ export const publicRoutes: IRoute[] = [
   {
     name: "reset-password",
     component: MakeResetPasswordScreen,
+  },
+  {
+    name: "new-password",
+    component: MakeNewPasswordScreen,
   },
 ];
