@@ -8,9 +8,16 @@ export const TextRoot = ({
   testID,
   variant,
   children,
+  ...rest
 }: ITextRoot): ReturnType<React.FC> => {
   return (
-    <CustomText align={align} testID={testID} variant={variant} color={color}>
+    <CustomText
+      color={color}
+      align={align}
+      testID={testID}
+      variant={variant}
+      {...rest}
+    >
       {children}
     </CustomText>
   );

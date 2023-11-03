@@ -1,4 +1,5 @@
 import { TThemeColors } from "@presentation/styles";
+import { TextProps } from "react-native";
 
 export type TTextAlign = "center" | "justify" | "right" | "left";
 
@@ -20,7 +21,7 @@ export type TTextVariant =
   | "text-small"
   | "text-x-small";
 
-export interface ITextRoot {
+export interface ITextRoot extends TextProps {
   testID?: string;
   align?: TTextAlign;
   color: TThemeColors;
