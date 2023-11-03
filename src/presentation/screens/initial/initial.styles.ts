@@ -3,7 +3,7 @@ import Constants from "expo-constants";
 
 export const Content = styled.View`
   flex: 1;
-  padding: 16px;
+  padding: 24px;
   margin-top: ${Constants.statusBarHeight}px;
 
   align-items: center;

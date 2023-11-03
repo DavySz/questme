@@ -192,10 +192,10 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
         "flexGrow": 1,
         "flexShrink": 1,
         "justifyContent": "flex-end",
-        "paddingBottom": 16,
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": 16,
+        "paddingBottom": 24,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
       }
     }
     variant="tertiary"
@@ -486,7 +486,7 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
           }
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -544,6 +544,7 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
            
           <Text
             color="primary"
+            onPress={[Function]}
             style={
               {
                 "color": "#6A5AE0",

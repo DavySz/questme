@@ -193,10 +193,10 @@ exports[`Initial Should render without errors 1`] = `
         "flexShrink": 1,
         "justifyContent": "space-between",
         "marginTop": 54,
-        "paddingBottom": 16,
-        "paddingLeft": 16,
-        "paddingRight": 16,
-        "paddingTop": 16,
+        "paddingBottom": 24,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 24,
       }
     }
     testID="initial-screen-content"

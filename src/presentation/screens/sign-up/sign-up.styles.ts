@@ -2,7 +2,7 @@ import { ScrollView } from "react-native";
 import styled from "styled-components/native";
 
 export const Content = styled(ScrollView).attrs({
-  contentContainerStyle: { padding: 16, alignItems: "center" },
+  contentContainerStyle: { padding: 24, alignItems: "center" },
   showsVerticalScrollIndicator: false,
 })`
   flex: 1;
