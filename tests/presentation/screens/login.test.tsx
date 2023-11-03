@@ -22,4 +22,19 @@ describe("Login", () => {
 
     expect(previousScreen).toBeTruthy();
   });
+
+  test("Should navigate to reset password screen when button is clicked", async () => {
+    const { getByTestId, findByTestId } = render(
+      <TestingPublicNavigator currentRoute="login" />
+    );
+
+    const buttonResetPassword = getByTestId("button-reset-password");
+    fireEvent.press(buttonResetPassword);
+
+    const resetPasswordScreen = await findByTestId(
+      "reset-password-screen-content"
+    );
+
+    expect(resetPasswordScreen).toBeTruthy();
+  });
 });
