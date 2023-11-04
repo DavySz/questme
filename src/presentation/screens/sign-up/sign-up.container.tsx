@@ -8,5 +8,14 @@ export const SignUpContainer = (): ReturnType<React.FC> => {
     navigation.goBack();
   };
 
-  return <SignUp handleGoBack={handleGoBack} />;
+  const handleGoToSignUpWithEmail = () => {
+    navigation.navigate("sign-up-email-first-step");
+  };
+
+  return (
+    <SignUp
+      handleGoBack={handleGoBack}
+      handleGoToSignUpWithEmail={handleGoToSignUpWithEmail}
+    />
+  );
 };

@@ -8,6 +8,7 @@ import { ISignUp } from "./types";
 
 export const SignUp = ({
   handleGoBack,
+  handleGoToSignUpWithEmail,
 }: ISignUp): ReturnType<React.FC<ISignUp>> => {
   return (
     <ScreenTemplate.Root variant="secondary">
@@ -16,12 +17,12 @@ export const SignUp = ({
       </ScreenTemplate.Header>
       <Content testID="sign-up-screen-content">
         <Main>
-          <Button.Root variant="google">
-            <Button.Icon icon={GoogleIcon} side="left" />
+          <Button.Root onPress={handleGoToSignUpWithEmail}>
+            <Button.Icon icon={LetterIcon} side="left" color="neutral-white" />
             <Button.Text>Sign Up with Email</Button.Text>
           </Button.Root>
-          <Button.Root>
-            <Button.Icon icon={LetterIcon} side="left" />
+          <Button.Root variant="google">
+            <Button.Icon icon={GoogleIcon} side="left" />
             <Button.Text>Sign Up with Google</Button.Text>
           </Button.Root>
           <Button.Root variant="facebook">
