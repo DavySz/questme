@@ -1,3 +1,4 @@
+import { colorMapping } from "@presentation/styles";
 import { IconWrapper } from "./styles";
 import { IButtonIcon } from "./types";
 
@@ -8,7 +9,7 @@ export const ButtonIcon = ({
 }: IButtonIcon): ReturnType<React.FC> => {
   const renderIcon = () => {
     if (color) {
-      return <Icon color={color} testID="icon-with-color" />;
+      return <Icon color={colorMapping(color)} testID="icon-with-color" />;
     }
     return <Icon testID="icon-without-color" />;
   };

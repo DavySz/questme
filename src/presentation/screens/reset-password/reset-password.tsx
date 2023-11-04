@@ -20,7 +20,7 @@ export const ResetPassword = ({
           <InputWrapper>
             <Input.Label>Email Address</Input.Label>
             <Input.Root>
-              <Input.Icon icon={LetterIcon} />
+              <Input.Icon icon={LetterIcon} color="primary" />
               <Input.Text placeholder="Your email address" />
             </Input.Root>
           </InputWrapper>

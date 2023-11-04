@@ -1,18 +1,15 @@
-import { Text } from "../text";
 import { HeaderContainer, Wrapper, getIconColor, getTextColor } from "./styles";
-import { IScreenTemplateHeader } from "./types";
 import ArrowLeftIcon from "@presentation/assets/icons/arrow-left-icon.svg";
+
+import { IScreenTemplateHeader } from "./types";
 import { Button } from "../button";
-import { useTheme } from "styled-components/native";
-import { TTheme } from "@presentation/styles";
+import { Text } from "../text";
 
 export const ScreenTemplateHeader = ({
   goBack,
   children,
   variant = "primary",
 }: IScreenTemplateHeader): ReturnType<React.FC<IScreenTemplateHeader>> => {
-  const theme = useTheme();
-
   const renderGoBack = () => {
     if (!goBack) return null;
 
@@ -25,7 +22,7 @@ export const ScreenTemplateHeader = ({
           full={false}
         >
           <Button.Icon
-            color={getIconColor(theme as TTheme, variant)}
+            color={getIconColor(variant)}
             icon={ArrowLeftIcon}
             side="none"
           />

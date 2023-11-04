@@ -1,3 +1,4 @@
+import { TThemeColors } from "@presentation/styles";
 import { ElementType, ReactNode } from "react";
 import { TextInputProps } from "react-native";
 
@@ -5,6 +6,7 @@ export type TIconSide = "left" | "right";
 
 export interface IInputIcon {
   icon: ElementType;
+  color?: TThemeColors;
 }
 
 export interface IInputRoot {

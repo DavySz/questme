@@ -9,14 +9,11 @@ import {
 } from "./types";
 import { TTheme, TThemeColors } from "@presentation/styles";
 
-export const getIconColor = (
-  theme: TTheme,
-  variant: TScreenTemplateVariant
-) => {
-  const color: Record<TScreenTemplateVariant, string> = {
-    primary: theme.colors.neutral.white,
-    secondary: theme.colors.neutral.black,
-    tertiary: theme.colors.neutral.white,
+export const getIconColor = (variant: TScreenTemplateVariant) => {
+  const color: Record<TScreenTemplateVariant, TThemeColors> = {
+    primary: "neutral-white",
+    secondary: "neutral-black",
+    tertiary: "neutral-white",
   };
 
   return color[variant];

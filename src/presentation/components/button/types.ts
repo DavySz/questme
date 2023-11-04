@@ -1,3 +1,4 @@
+import { TThemeColors } from "@presentation/styles";
 import { ElementType } from "react";
 import { TouchableOpacityProps } from "react-native";
 
@@ -33,7 +34,7 @@ export interface IChildProps {
 export interface IButtonIcon {
   icon: ElementType;
   side: TIconSide;
-  color?: string;
+  color?: TThemeColors;
 }
 
 export interface IButtonIconStyles {
