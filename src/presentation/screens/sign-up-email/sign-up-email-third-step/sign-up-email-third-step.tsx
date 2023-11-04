@@ -17,7 +17,7 @@ export const SignUpEmailThirdStep = ({
       <ScreenTemplate.Header goBack={handleGoBack}>
         Create a username
       </ScreenTemplate.Header>
-      <Content testID="sign-up-email-second-step-screen-content">
+      <Content testID="sign-up-email-third-step-screen-content">
         <Main>
           <Input.Label>Username</Input.Label>
           <Input.Root>
