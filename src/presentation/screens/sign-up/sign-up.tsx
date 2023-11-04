@@ -17,7 +17,10 @@ export const SignUp = ({
       </ScreenTemplate.Header>
       <Content testID="sign-up-screen-content">
         <Main>
-          <Button.Root onPress={handleGoToSignUpWithEmail}>
+          <Button.Root
+            onPress={handleGoToSignUpWithEmail}
+            testID="button-sign-up-with-email"
+          >
             <Button.Icon icon={LetterIcon} side="left" color="neutral-white" />
             <Button.Text>Sign Up with Email</Button.Text>
           </Button.Root>
