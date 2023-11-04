@@ -16,6 +16,7 @@ import { AppRoutes } from "@main/routes/app-routes";
 import { StatusBar } from "react-native";
 
 import { GestureWrapper } from "./styles";
+import { RecoilRoot } from "recoil";
 
 export const Entry = (): ReturnType<React.FC> => {
   SplashScreen.preventAutoHideAsync();
@@ -34,14 +35,16 @@ export const Entry = (): ReturnType<React.FC> => {
 
   return (
     <ThemeProvider theme={theme}>
-      <GestureWrapper>
-        <StatusBar
-          translucent
-          barStyle="light-content"
-          backgroundColor="transparent"
-        />
-        <AppRoutes />
-      </GestureWrapper>
+      <RecoilRoot>
+        <GestureWrapper>
+          <StatusBar
+            translucent
+            barStyle="light-content"
+            backgroundColor="transparent"
+          />
+          <AppRoutes />
+        </GestureWrapper>
+      </RecoilRoot>
     </ThemeProvider>
   );
 };
