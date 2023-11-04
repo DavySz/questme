@@ -411,7 +411,10 @@ exports[`Login Should render without errors 1`] = `
               }
               testID="input-wrapper"
             >
-              <SvgMock />
+              <SvgMock
+                color="#6A5AE0"
+                testID="icon-with-color"
+              />
               <TextInput
                 inputMode="email"
                 onBlur={[Function]}
@@ -476,7 +479,9 @@ exports[`Login Should render without errors 1`] = `
               }
               testID="input-wrapper"
             >
-              <SvgMock />
+              <SvgMock
+                testID="icon-without-color"
+              />
               <TextInput
                 onBlur={[Function]}
                 onFocus={[Function]}

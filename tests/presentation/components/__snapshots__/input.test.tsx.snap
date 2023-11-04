@@ -47,7 +47,9 @@ exports[`Input Should render input without errors 1`] = `
     }
     testID="input-wrapper"
   >
-    <SvgMock />
+    <SvgMock
+      testID="icon-without-color"
+    />
     <TextInput
       onBlur={[Function]}
       onFocus={[Function]}

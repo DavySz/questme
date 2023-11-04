@@ -2,49 +2,136 @@
 
 exports[`SignUp Should render screen without errors 1`] = `
 <View
-  onLayout={[Function]}
   style={
     {
+      "backgroundColor": "#EFEEFC",
       "flexBasis": 0,
       "flexGrow": 1,
       "flexShrink": 1,
     }
   }
-  testID="key-board-safe-area"
+  testID="default-container"
+  variant="secondary"
 >
   <View
     style={
       {
-        "backgroundColor": "#EFEEFC",
-        "flexBasis": 0,
-        "flexGrow": 1,
-        "flexShrink": 1,
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+        "width": "100%",
       }
     }
-    testID="default-container"
-    variant="secondary"
   >
     <View
       style={
         {
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "flexDirection": "row",
-          "justifyContent": "center",
-          "paddingBottom": 16,
-          "paddingLeft": 16,
-          "paddingRight": 16,
-          "paddingTop": 16,
-          "width": "100%",
+          "left": 16,
+          "position": "absolute",
+          "top": 8,
         }
       }
     >
       <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           {
-            "left": 16,
-            "position": "absolute",
-            "top": 8,
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "borderBottomLeftRadius": 20,
+            "borderBottomRightRadius": 20,
+            "borderTopLeftRadius": 20,
+            "borderTopRightRadius": 20,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 16,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 16,
+          }
+        }
+        testID="go-back-button"
+      >
+        <View
+          side="none"
+          style={{}}
+          testID="icon-wrapper"
+        >
+          <SvgMock
+            color="#0C092A"
+            testID="icon-with-color"
+          />
+        </View>
+      </View>
+    </View>
+    <Text
+      color="neutral-black"
+      style={
+        {
+          "color": "#0C092A",
+          "fontFamily": "Rubik_500Medium",
+          "fontSize": 24,
+          "lineHeight": 36,
+        }
+      }
+      testID="header-title"
+      variant="heading-3"
+    >
+      Sign Up
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "padding": 24,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+    style={{}}
+    testID="sign-up-screen-content"
+    variant="secondary"
+  >
+    <View>
+      <View
+        style={
+          {
+            "gap": 16,
+            "marginBottom": 24,
+            "width": "100%",
           }
         }
       >
@@ -79,7 +166,7 @@ exports[`SignUp Should render screen without errors 1`] = `
           style={
             {
               "alignItems": "center",
-              "backgroundColor": "transparent",
+              "backgroundColor": "#6A5AE0",
               "borderBottomLeftRadius": 20,
               "borderBottomRightRadius": 20,
               "borderTopLeftRadius": 20,
@@ -91,545 +178,231 @@ exports[`SignUp Should render screen without errors 1`] = `
               "paddingLeft": 16,
               "paddingRight": 16,
               "paddingTop": 16,
+              "width": "100%",
             }
           }
-          testID="go-back-button"
+          testID="button-sign-up-with-email"
         >
           <View
-            side="none"
-            style={{}}
+            side="left"
+            style={
+              {
+                "marginRight": 16,
+              }
+            }
             testID="icon-wrapper"
           >
             <SvgMock
-              color="#0C092A"
+              color="#FFF"
               testID="icon-with-color"
             />
           </View>
-        </View>
-      </View>
-      <Text
-        color="neutral-black"
-        style={
-          {
-            "color": "#0C092A",
-            "fontFamily": "Rubik_500Medium",
-            "fontSize": 24,
-            "lineHeight": 36,
-          }
-        }
-        testID="header-title"
-        variant="heading-3"
-      >
-        Login
-      </Text>
-    </View>
-    <RCTScrollView
-      contentContainerStyle={
-        {
-          "flex": 1,
-          "padding": 24,
-        }
-      }
-      showsVerticalScrollIndicator={false}
-      style={{}}
-      testID="login-screen-content"
-      variant="secondary"
-    >
-      <View>
-        <View
-          style={
-            {
-              "alignItems": "center",
-              "gap": 16,
-              "justifyContent": "center",
-              "marginBottom": 24,
-              "width": "100%",
-            }
-          }
-        >
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={false}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#FFF",
-                "borderBottomLeftRadius": 20,
-                "borderBottomRightRadius": 20,
-                "borderColor": "#E6E6E6",
-                "borderStyle": "solid",
-                "borderTopLeftRadius": 20,
-                "borderTopRightRadius": 20,
-                "borderWidth": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "opacity": 1,
-                "paddingBottom": 16,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 16,
-                "width": "100%",
-              }
-            }
-          >
-            <View
-              side="left"
-              style={
-                {
-                  "marginRight": 16,
-                }
-              }
-              testID="icon-wrapper"
-            >
-              <SvgMock
-                testID="icon-without-color"
-              />
-            </View>
-            <Text
-              color="neutral-black"
-              style={
-                {
-                  "color": "#0C092A",
-                  "fontFamily": "Rubik_500Medium",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-              variant="body-normal-medium"
-            >
-              Login with Google
-            </Text>
-          </View>
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={false}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              {
-                "alignItems": "center",
-                "backgroundColor": "#0056B2",
-                "borderBottomLeftRadius": 20,
-                "borderBottomRightRadius": 20,
-                "borderTopLeftRadius": 20,
-                "borderTopRightRadius": 20,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "opacity": 1,
-                "paddingBottom": 16,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 16,
-                "width": "100%",
-              }
-            }
-          >
-            <View
-              side="left"
-              style={
-                {
-                  "marginRight": 16,
-                }
-              }
-              testID="icon-wrapper"
-            >
-              <SvgMock
-                testID="icon-without-color"
-              />
-            </View>
-            <Text
-              color="neutral-white"
-              style={
-                {
-                  "color": "#FFF",
-                  "fontFamily": "Rubik_500Medium",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-              variant="body-normal-medium"
-            >
-              Login with Facebook
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
-            {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginBottom": 24,
-              "width": "100%",
-            }
-          }
-        >
-          <View
-            style={
-              {
-                "backgroundColor": "#E6E6E6",
-                "flexDirection": "row",
-                "height": 1,
-                "marginBottom": 0,
-                "marginLeft": 16,
-                "marginRight": 16,
-                "marginTop": 0,
-                "width": "100%",
-              }
-            }
-          />
           <Text
-            color="neutral-gey-2"
+            color="neutral-white"
             style={
               {
-                "color": "#858494",
-                "fontFamily": "Rubik_400Regular",
+                "color": "#FFF",
+                "fontFamily": "Rubik_500Medium",
                 "fontSize": 16,
                 "lineHeight": 24,
               }
             }
-            variant="body-normal-regular"
+            variant="body-normal-medium"
           >
-            OR
+            Sign Up with Email
           </Text>
-          <View
-            style={
-              {
-                "backgroundColor": "#E6E6E6",
-                "flexDirection": "row",
-                "height": 1,
-                "marginBottom": 0,
-                "marginLeft": 16,
-                "marginRight": 16,
-                "marginTop": 0,
-                "width": "100%",
-              }
-            }
-          />
         </View>
         <View
-          style={
+          accessibilityState={
             {
-              "gap": 16,
-              "marginBottom": 24,
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
             }
           }
-        >
-          <View
-            style={{}}
-          >
-            <View
-              style={
-                {
-                  "marginBottom": 8,
-                }
-              }
-            >
-              <Text
-                color="neutral-black"
-                style={
-                  {
-                    "color": "#0C092A",
-                    "fontFamily": "Rubik_400Regular",
-                    "fontSize": 14,
-                    "lineHeight": 20,
-                  }
-                }
-                variant="body-small-regular"
-              >
-                Email Address
-              </Text>
-            </View>
-            <View
-              isFocused={false}
-              style={
-                {
-                  "backgroundColor": "#FFF",
-                  "borderBottomLeftRadius": 20,
-                  "borderBottomRightRadius": 20,
-                  "borderColor": "#EFEEFC",
-                  "borderStyle": "solid",
-                  "borderTopLeftRadius": 20,
-                  "borderTopRightRadius": 20,
-                  "borderWidth": 2,
-                  "flexDirection": "row",
-                  "gap": 16,
-                  "paddingBottom": 16,
-                  "paddingLeft": 16,
-                  "paddingRight": 16,
-                  "paddingTop": 16,
-                  "width": "100%",
-                }
-              }
-              testID="input-wrapper"
-            >
-              <SvgMock />
-              <TextInput
-                inputMode="email"
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Your email address"
-                style={
-                  {
-                    "fontFamily": "Rubik_400Regular",
-                    "fontSize": 16,
-                    "width": "100%",
-                  }
-                }
-                testID="custom-input"
-              />
-            </View>
-          </View>
-          <View
-            style={{}}
-          >
-            <View
-              style={
-                {
-                  "marginBottom": 8,
-                }
-              }
-            >
-              <Text
-                color="neutral-black"
-                style={
-                  {
-                    "color": "#0C092A",
-                    "fontFamily": "Rubik_400Regular",
-                    "fontSize": 14,
-                    "lineHeight": 20,
-                  }
-                }
-                variant="body-small-regular"
-              >
-                Password
-              </Text>
-            </View>
-            <View
-              isFocused={false}
-              style={
-                {
-                  "backgroundColor": "#FFF",
-                  "borderBottomLeftRadius": 20,
-                  "borderBottomRightRadius": 20,
-                  "borderColor": "#EFEEFC",
-                  "borderStyle": "solid",
-                  "borderTopLeftRadius": 20,
-                  "borderTopRightRadius": 20,
-                  "borderWidth": 2,
-                  "flexDirection": "row",
-                  "gap": 16,
-                  "paddingBottom": 16,
-                  "paddingLeft": 16,
-                  "paddingRight": 16,
-                  "paddingTop": 16,
-                  "width": "100%",
-                }
-              }
-              testID="input-wrapper"
-            >
-              <SvgMock />
-              <TextInput
-                onBlur={[Function]}
-                onFocus={[Function]}
-                placeholder="Your password"
-                style={
-                  {
-                    "fontFamily": "Rubik_400Regular",
-                    "fontSize": 16,
-                    "width": "100%",
-                  }
-                }
-                testID="custom-input"
-              />
-            </View>
-          </View>
-        </View>
-        <View
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             {
               "alignItems": "center",
-              "gap": 16,
+              "backgroundColor": "#FFF",
+              "borderBottomLeftRadius": 20,
+              "borderBottomRightRadius": 20,
+              "borderColor": "#E6E6E6",
+              "borderStyle": "solid",
+              "borderTopLeftRadius": 20,
+              "borderTopRightRadius": 20,
+              "borderWidth": 1,
+              "flexDirection": "row",
               "justifyContent": "center",
-              "marginBottom": 24,
+              "opacity": 1,
+              "paddingBottom": 16,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 16,
               "width": "100%",
             }
           }
         >
           <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={false}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+            side="left"
             style={
               {
-                "alignItems": "center",
-                "backgroundColor": "#6A5AE0",
-                "borderBottomLeftRadius": 20,
-                "borderBottomRightRadius": 20,
-                "borderTopLeftRadius": 20,
-                "borderTopRightRadius": 20,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "opacity": 1,
-                "paddingBottom": 16,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 16,
-                "width": "100%",
+                "marginRight": 16,
               }
             }
+            testID="icon-wrapper"
           >
-            <Text
-              color="neutral-white"
-              style={
-                {
-                  "color": "#FFF",
-                  "fontFamily": "Rubik_500Medium",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-              variant="body-normal-medium"
-            >
-              Login
-            </Text>
+            <SvgMock
+              testID="icon-without-color"
+            />
           </View>
-          <View
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": undefined,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
+          <Text
+            color="neutral-black"
             style={
               {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "borderBottomLeftRadius": 20,
-                "borderBottomRightRadius": 20,
-                "borderTopLeftRadius": 20,
-                "borderTopRightRadius": 20,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "opacity": 1,
-                "paddingBottom": 16,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "paddingTop": 16,
-                "width": "100%",
+                "color": "#0C092A",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 16,
+                "lineHeight": 24,
               }
             }
-            testID="button-reset-password"
+            variant="body-normal-medium"
           >
-            <Text
-              color="primary"
-              style={
-                {
-                  "color": "#6A5AE0",
-                  "fontFamily": "Rubik_500Medium",
-                  "fontSize": 16,
-                  "lineHeight": 24,
-                }
-              }
-              variant="body-normal-medium"
-            >
-              Forgot password?
-            </Text>
-          </View>
+            Sign Up with Google
+          </Text>
         </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#0056B2",
+              "borderBottomLeftRadius": 20,
+              "borderBottomRightRadius": 20,
+              "borderTopLeftRadius": 20,
+              "borderTopRightRadius": 20,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingBottom": 16,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 16,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            side="left"
+            style={
+              {
+                "marginRight": 16,
+              }
+            }
+            testID="icon-wrapper"
+          >
+            <SvgMock
+              testID="icon-without-color"
+            />
+          </View>
+          <Text
+            color="neutral-white"
+            style={
+              {
+                "color": "#FFF",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+            variant="body-normal-medium"
+          >
+            Sign Up with Facebook
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "gap": 24,
+          }
+        }
+      >
+        <Text
+          color="neutral-gey-2"
+          style={
+            {
+              "color": "#858494",
+              "fontFamily": "Rubik_400Regular",
+              "fontSize": 16,
+              "lineHeight": 24,
+            }
+          }
+          variant="body-normal-regular"
+        >
+          Already have an account?
+           
+          <Text
+            color="primary"
+            style={
+              {
+                "color": "#6A5AE0",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 16,
+                "lineHeight": 24,
+              }
+            }
+            variant="body-normal-medium"
+          >
+            Login
+          </Text>
+        </Text>
         <Text
           align="center"
           color="neutral-gey-2"
@@ -662,7 +435,7 @@ exports[`SignUp Should render screen without errors 1`] = `
           </Text>
         </Text>
       </View>
-    </RCTScrollView>
-  </View>
+    </View>
+  </RCTScrollView>
 </View>
 `;
