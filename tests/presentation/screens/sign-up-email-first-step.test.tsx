@@ -23,4 +23,19 @@ describe("SignUpEmailFirstStep", () => {
 
     expect(previousScreen).toBeTruthy();
   });
+
+  test("Should navigate to second step screen when continue button is clicked", async () => {
+    const { getByText, findByTestId } = render(
+      <TestingPublicNavigator currentRoute="sign-up-email-first-step" />
+    );
+
+    const buttonSecondStep = getByText("Continue");
+    fireEvent.press(buttonSecondStep);
+
+    const secondStepScreen = await findByTestId(
+      "sign-up-email-second-step-screen-content"
+    );
+
+    expect(secondStepScreen).toBeTruthy();
+  });
 });
