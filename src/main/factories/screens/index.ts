@@ -5,3 +5,6 @@ export * from "./login-factory";
 export * from "./sign-up-factory";
 export * from "./reset-password-factory";
 export * from "./new-password";
+export * from "./sign-up-email-first-step-factory";
+export * from "./sign-up-email-second-step-factory";
+export * from "./sign-up-email-third-step-factory";
