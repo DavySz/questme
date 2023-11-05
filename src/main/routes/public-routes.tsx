@@ -4,7 +4,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from "@react-navigation/native-stack";
-import { publicRoutes } from "./routes";
+import { publicRoutes } from "./register-routes";
 
 const Stack = createNativeStackNavigator();
 

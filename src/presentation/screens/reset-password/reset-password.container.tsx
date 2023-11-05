@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { ResetPassword } from "./reset-password";
+import { ResetPasswordUI } from "./reset-password.ui";
 
 export const ResetPasswordContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
@@ -8,5 +8,5 @@ export const ResetPasswordContainer = (): ReturnType<React.FC> => {
     navigation.goBack();
   };
 
-  return <ResetPassword handleGoBack={handleGoBack} />;
+  return <ResetPasswordUI handleGoBack={handleGoBack} />;
 };

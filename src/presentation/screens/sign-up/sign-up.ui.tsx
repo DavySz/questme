@@ -6,7 +6,7 @@ import LetterIcon from "@presentation/assets/icons/letter-icon.svg";
 import { Content, Footer, Main } from "./sign-up.styles";
 import { ISignUp } from "./types";
 
-export const SignUp = ({
+export const SignUpUI = ({
   handleGoBack,
   handleGoToSignUpWithEmail,
 }: ISignUp): ReturnType<React.FC<ISignUp>> => {

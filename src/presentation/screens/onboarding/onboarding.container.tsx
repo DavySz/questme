@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Onboarding } from "./onboarding";
+import { OnboardingUI } from "./onboarding.ui";
 import { FlatList, useWindowDimensions } from "react-native";
 import { TChange } from "./types";
 import { slides } from "./slides";
@@ -27,7 +27,7 @@ export const OnboardingContainer = (): ReturnType<React.FC> => {
   };
 
   return (
-    <Onboarding
+    <OnboardingUI
       updateCurrentSlideIndex={updateCurrentSlideIndex}
       handleGoToSignUpScreen={handleGoToSignUpScreen}
       handleGoToLoginScreen={handleGoToLoginScreen}

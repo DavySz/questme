@@ -1,5 +1,5 @@
 import React from "react";
-import { Login } from "./login";
+import { LoginUI } from "./login.ui";
 import { useNavigation } from "@react-navigation/native";
 
 export const LoginContainer = (): ReturnType<React.FC> => {
@@ -14,7 +14,7 @@ export const LoginContainer = (): ReturnType<React.FC> => {
   };
 
   return (
-    <Login
+    <LoginUI
       handleGoBack={handleGoBack}
       handleGoToResetPasswordScreen={handleGoToResetPasswordScreen}
     />

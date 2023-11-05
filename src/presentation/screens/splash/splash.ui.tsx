@@ -2,7 +2,7 @@ import { ScreenTemplate, Text } from "@presentation/components";
 import LogoIcon from "@presentation/assets/icons/logo-icon.svg";
 import { Content } from "./splash.styles";
 
-export const Splash = (): ReturnType<React.FC> => {
+export const SplashUI = (): ReturnType<React.FC> => {
   return (
     <ScreenTemplate.Root variant="tertiary">
       <Content>

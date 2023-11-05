@@ -4,7 +4,7 @@ import { IResetPassword } from "./types";
 
 import LetterIcon from "@presentation/assets/icons/letter-icon.svg";
 
-export const ResetPassword = ({
+export const ResetPasswordUI = ({
   handleGoBack,
 }: IResetPassword): ReturnType<React.FC<IResetPassword>> => {
   return (

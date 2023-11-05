@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { SignUpEmailThirdStep } from "./sign-up-email-third-step";
+import { SignUpEmailThirdStepUI } from "./sign-up-email-third-step.ui";
 
 export const SignUpEmailThirdStepContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
@@ -8,5 +8,5 @@ export const SignUpEmailThirdStepContainer = (): ReturnType<React.FC> => {
     navigation.goBack();
   };
 
-  return <SignUpEmailThirdStep handleGoBack={handleGoBack} />;
+  return <SignUpEmailThirdStepUI handleGoBack={handleGoBack} />;
 };

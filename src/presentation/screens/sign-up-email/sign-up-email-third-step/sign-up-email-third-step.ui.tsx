@@ -9,7 +9,7 @@ import { Content, Footer, Main } from "./sign-up-email-third-step.styles";
 import UserIcon from "@presentation/assets/icons/user-icon.svg";
 import { ISignUpEmailThirdStep } from "./types";
 
-export const SignUpEmailThirdStep = ({
+export const SignUpEmailThirdStepUI = ({
   handleGoBack,
 }: ISignUpEmailThirdStep): ReturnType<React.FC<ISignUpEmailThirdStep>> => {
   return (

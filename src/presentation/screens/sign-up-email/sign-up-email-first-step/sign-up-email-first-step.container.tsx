@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { SignUpEmailFirstStep } from "./sign-up-email-first-step";
+import { SignUpEmailFirstStepUI } from "./sign-up-email-first-step.ui";
 
 export const SignUpEmailFirstStepContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ export const SignUpEmailFirstStepContainer = (): ReturnType<React.FC> => {
   };
 
   return (
-    <SignUpEmailFirstStep
+    <SignUpEmailFirstStepUI
       handleSignUpEmailSecondStepScreen={handleSignUpEmailSecondStepScreen}
       handleGoBack={handleGoBack}
     />

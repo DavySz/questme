@@ -9,7 +9,7 @@ import { Content, Footer, Main } from "./sign-up-email-first-step.styles";
 import LetterIcon from "@presentation/assets/icons/letter-icon.svg";
 import { ISignUpEmailFirstStep } from "./types";
 
-export const SignUpEmailFirstStep = ({
+export const SignUpEmailFirstStepUI = ({
   handleGoBack,
   handleSignUpEmailSecondStepScreen,
 }: ISignUpEmailFirstStep): ReturnType<React.FC<ISignUpEmailFirstStep>> => {

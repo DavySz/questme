@@ -11,7 +11,7 @@ import {
 } from "./initial.styles";
 import { IInitial } from "./types";
 
-export const Initial = ({
+export const InitialUI = ({
   handleGoToLoginScreen,
   handleGoToSignUpScreen,
 }: IInitial): ReturnType<React.FC<IInitial>> => {

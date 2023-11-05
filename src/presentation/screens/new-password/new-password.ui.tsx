@@ -4,7 +4,7 @@ import { INewPassword } from "./types";
 
 import LockIcon from "@presentation/assets/icons/lock-icon.svg";
 
-export const NewPassword = ({
+export const NewPasswordUI = ({
   handleGoToInitial,
 }: INewPassword): ReturnType<React.FC<INewPassword>> => {
   return (

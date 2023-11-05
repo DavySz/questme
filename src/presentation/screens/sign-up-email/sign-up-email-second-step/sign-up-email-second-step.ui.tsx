@@ -9,7 +9,7 @@ import { Content, Footer, Main } from "./sign-up-email-second-step.styles";
 import LockIcon from "@presentation/assets/icons/lock-icon.svg";
 import { ISignUpEmailSecondStep } from "./types";
 
-export const SignUpEmailSecondStep = ({
+export const SignUpEmailSecondStepUI = ({
   handleGoBack,
   handleSignUpEmailThirdStepScreen,
 }: ISignUpEmailSecondStep): ReturnType<React.FC<ISignUpEmailSecondStep>> => {

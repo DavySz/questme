@@ -1,5 +1,5 @@
-import { Home } from "./home";
+import { HomeUI } from "./home.ui";
 
 export const HomeContainer = (): ReturnType<React.FC> => {
-  return <Home />;
+  return <HomeUI />;
 };

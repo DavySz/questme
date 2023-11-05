@@ -12,7 +12,7 @@ import { FlatList } from "react-native";
 import { IOnboarding, ISlide, OnboardingRef } from "./types";
 import React from "react";
 
-export const Onboarding = React.forwardRef(
+export const OnboardingUI = React.forwardRef(
   (props: IOnboarding, ref: OnboardingRef) => {
     const {
       slides,

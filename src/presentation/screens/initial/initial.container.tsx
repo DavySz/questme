@@ -1,5 +1,5 @@
 import React from "react";
-import { Initial } from "./initial";
+import { InitialUI } from "./initial.ui";
 
 import { useNavigation } from "@react-navigation/native";
 
@@ -15,7 +15,7 @@ export const InitialContainer = (): ReturnType<React.FC> => {
   };
 
   return (
-    <Initial
+    <InitialUI
       handleGoToLoginScreen={handleGoToLoginScreen}
       handleGoToSignUpScreen={handleGoToSignUpScreen}
     />

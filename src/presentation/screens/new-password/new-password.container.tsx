@@ -1,11 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
-import { NewPassword } from "./new-password";
+import { NewPasswordUI } from "./new-password.ui";
 
-export const NewPasswordContainer = (): ReturnType<React.FC> => {
+export const NewPasswordUIContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
 
   const handleGoToInitial = () => {
     navigation.navigate("initial");
   };
-  return <NewPassword handleGoToInitial={handleGoToInitial} />;
+  return <NewPasswordUI handleGoToInitial={handleGoToInitial} />;
 };

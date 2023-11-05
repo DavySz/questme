@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { SignUp } from "./sign-up";
+import { SignUpUI } from "./sign-up.ui";
 
 export const SignUpContainer = (): ReturnType<React.FC> => {
   const navigation = useNavigation();
@@ -13,7 +13,7 @@ export const SignUpContainer = (): ReturnType<React.FC> => {
   };
 
   return (
-    <SignUp
+    <SignUpUI
       handleGoBack={handleGoBack}
       handleGoToSignUpWithEmail={handleGoToSignUpWithEmail}
     />

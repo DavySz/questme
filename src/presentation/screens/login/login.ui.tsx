@@ -23,7 +23,7 @@ import {
 import { Keyboard, TouchableWithoutFeedback } from "react-native";
 import { ILogin } from "./types";
 
-export const Login = ({
+export const LoginUI = ({
   handleGoBack,
   handleGoToResetPasswordScreen,
 }: ILogin): ReturnType<React.FC<ILogin>> => {

@@ -1,5 +1,5 @@
-import { Splash } from "./splash";
+import { SplashUI } from "./splash.ui";
 
 export const SplashContainer = (): ReturnType<React.FC> => {
-  return <Splash />;
+  return <SplashUI />;
 };
