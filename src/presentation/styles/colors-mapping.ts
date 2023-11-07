@@ -14,6 +14,7 @@ export function colorMapping(color: TThemeColors) {
     "support-accent-1": colors.support["accent-1"],
     "support-accent-2": colors.support["accent-2"],
     "support-accent-3": colors.support["accent-3"],
+    "support-accent-4": colors.support["accent-4"],
 
     "neutral-black": colors.neutral.black,
     "neutral-white": colors.neutral.white,

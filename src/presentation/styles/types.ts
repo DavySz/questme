@@ -12,6 +12,7 @@ export type TThemeColors =
   | "support-accent-1"
   | "support-accent-2"
   | "support-accent-3"
+  | "support-accent-4"
   | "neutral-black"
   | "neutral-white"
   | "neutral-gey-1"

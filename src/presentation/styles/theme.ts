@@ -14,6 +14,7 @@ export const theme = {
       "accent-1": "#FFD6DD",
       "accent-2": "#C9F2E9",
       "accent-3": "#C4D0FB",
+      "accent-4": "#660012",
     },
 
     neutral: {
@@ -25,6 +26,11 @@ export const theme = {
       "gey-3": "#CCC",
       "gey-4": "#E6E6E6",
       "gey-5": "#EFEEFC",
+    },
+
+    chart: {
+      primary: "#FF8FA2",
+      secondary: "#FFB3C0",
     },
   },
   fonts: {
