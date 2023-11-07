@@ -2,7 +2,7 @@ import React from "react";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { publicRoutes } from "@main/routes/register-routes";
+import { publicRoutes } from "@main/routes/register-routes.public";
 
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "@presentation/styles";

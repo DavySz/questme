@@ -4,7 +4,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
 } from "@react-navigation/native-stack";
-import { publicRoutes } from "./register-routes.public";
+import { privateRoutes } from "./register-routes.private";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,13 +12,10 @@ const screenOptions: NativeStackNavigationOptions = {
   headerShown: false,
 };
 
-export const PublicRoutes = () => {
+export const PrivateRoutes = () => {
   return (
-    <Stack.Navigator
-      screenOptions={screenOptions}
-      initialRouteName="onboarding"
-    >
-      {publicRoutes.map(({ component, name }) => (
+    <Stack.Navigator screenOptions={screenOptions} initialRouteName="home">
+      {privateRoutes.map(({ component, name }) => (
         <Stack.Screen name={name} component={component} key={name} />
       ))}
     </Stack.Navigator>
