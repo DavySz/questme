@@ -37,7 +37,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 48,
         }
       }
-      type="fill"
     />
   </View>
   <View
@@ -65,7 +64,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 20,
         }
       }
-      type="fill"
     />
   </View>
   <View
@@ -92,7 +90,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 242,
         }
       }
-      type="fill"
     />
   </View>
   <View
@@ -123,7 +120,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 418,
         }
       }
-      type="outline"
     />
   </View>
   <View
@@ -150,7 +146,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 242,
         }
       }
-      type="fill"
     />
   </View>
   <View
@@ -181,7 +176,6 @@ exports[`Splash Should render without errors 1`] = `
           "width": 418,
         }
       }
-      type="outline"
     />
   </View>
   <View

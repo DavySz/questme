@@ -1,9 +1,9 @@
 import { InitialContainer } from "@presentation/screens";
 import { customRender, TestingPublicNavigator } from "../../utils";
 import { fireEvent, render } from "@testing-library/react-native";
-import { Initial } from "@presentation/screens/initial/initial";
 
 import React from "react";
+import { InitialUI } from "@presentation/screens/initial/initial.ui";
 
 describe("Initial", () => {
   test("Should render without errors", () => {
@@ -16,7 +16,7 @@ describe("Initial", () => {
     const handleGoToSignUpScreenMock = jest.fn();
 
     const { getByTestId } = customRender(
-      <Initial
+      <InitialUI
         handleGoToSignUpScreen={handleGoToSignUpScreenMock}
         handleGoToLoginScreen={handleGoToLoginScreenMock}
       />

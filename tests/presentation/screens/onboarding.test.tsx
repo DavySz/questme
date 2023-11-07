@@ -1,4 +1,3 @@
-import { Onboarding } from "@presentation/screens/onboarding/onboarding";
 import { OnboardingDot } from "@presentation/screens/onboarding/onboarding.dot";
 import { slides } from "@presentation/screens/onboarding/slides";
 import { ISlide } from "@presentation/screens/onboarding/types";
@@ -6,6 +5,7 @@ import Illustration from "@presentation/assets/illustrations/onboarding-first-il
 import { OnboardingContainer } from "@presentation/screens";
 import { customRender, TestingPublicNavigator } from "../../utils";
 import { fireEvent, render } from "@testing-library/react-native";
+import { OnboardingUI } from "@presentation/screens/onboarding/onboarding.ui";
 
 const mockSlides: ISlide[] = [
   {
@@ -65,7 +65,7 @@ describe("Onboarding", () => {
       const handleGoToLoginScreenJest = jest.fn();
 
       const { getByTestId } = customRender(
-        <Onboarding
+        <OnboardingUI
           currentIndex={0}
           slides={mockSlides}
           handleGoToLoginScreen={handleGoToLoginScreenJest}
