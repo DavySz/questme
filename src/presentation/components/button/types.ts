@@ -7,7 +7,8 @@ export type TButtonVariant =
   | "secondary"
   | "tertiary"
   | "google"
-  | "facebook";
+  | "facebook"
+  | "location";
 
 export type TIconSide = "left" | "right" | "none";
 

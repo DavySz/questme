@@ -17,6 +17,7 @@ export const getButtonBackground = (
     tertiary: theme.colors.transparent,
     facebook: theme.colors.company.facebook,
     google: theme.colors.neutral.white,
+    location: theme.colors.neutral.white,
   };
 
   return colors[variant];
@@ -29,6 +30,7 @@ export const getButtonTextColor = (variant: TButtonVariant): TThemeColors => {
     tertiary: "primary",
     facebook: "neutral-white",
     google: "neutral-black",
+    location: "primary",
   };
 
   return color[variant] as TThemeColors;
