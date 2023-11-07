@@ -1,12 +1,6 @@
 import { StatusBar } from "react-native";
-import styled, { css } from "styled-components/native";
-import {
-  IScreenTemplateBubbleStyles,
-  IScreenTemplateRootStyles,
-  ScreenTemplateBubblesBackgroundStyles,
-  TBubbleType,
-  TScreenTemplateVariant,
-} from "./types";
+import styled from "styled-components/native";
+import { IScreenTemplateRootStyles, TScreenTemplateVariant } from "./types";
 import { TTheme, TThemeColors } from "@presentation/styles";
 
 export const getIconColor = (variant: TScreenTemplateVariant) => {
@@ -42,51 +36,6 @@ export const getTextColor = (variant: TScreenTemplateVariant) => {
   return color[variant];
 };
 
-export const getBubbleType = (bubbleType: TBubbleType) => {
-  if (bubbleType === "fill") {
-    return css`
-      background-color: ${({ theme }) => theme.colors.support["accent-2"]};
-    `;
-  }
-
-  return css`
-    background-color: ${({ theme }) => theme.colors.transparent};
-    border: 1px solid ${({ theme }) => theme.colors.support["accent-2"]};
-  `;
-};
-
-export const getWrapperPosition = (
-  position: Partial<ScreenTemplateBubblesBackgroundStyles>
-) => {
-  const customPosition = [];
-
-  if (position.bottom) {
-    customPosition.push(css`
-      bottom: ${position.bottom}px;
-    `);
-  }
-
-  if (position.left) {
-    customPosition.push(css`
-      left: ${position.left}px;
-    `);
-  }
-
-  if (position.top) {
-    customPosition.push(css`
-      top: ${position.top}px;
-    `);
-  }
-
-  if (position.right) {
-    customPosition.push(css`
-      right: ${position.right}px;
-    `);
-  }
-
-  return customPosition;
-};
-
 export const HeaderContainer = styled.View`
   flex-direction: row;
 
@@ -116,25 +65,4 @@ export const Container = styled.View<IScreenTemplateRootStyles>`
 export const BubbleWrapper = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.primary};
-`;
-
-export const Circle = styled.View<IScreenTemplateBubbleStyles>`
-  width: ${({ size }) => size}px;
-  height: ${({ size }) => size}px;
-
-  border-radius: ${({ size }) => size / 2}px;
-
-  ${({ type }) => getBubbleType(type)};
-
-  opacity: 0.1;
-`;
-
-export const PositionWrapper = styled.View<
-  Partial<ScreenTemplateBubblesBackgroundStyles>
->`
-  position: absolute;
-  ${(props) =>
-    getWrapperPosition(
-      props as Partial<ScreenTemplateBubblesBackgroundStyles>
-    )};
 `;

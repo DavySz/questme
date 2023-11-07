@@ -1,5 +1,4 @@
 export type TScreenTemplateVariant = "primary" | "secondary" | "tertiary";
-export type TBubbleType = "fill" | "outline";
 
 export interface IScreenTemplateHeader {
   variant?: TScreenTemplateVariant;
@@ -24,18 +23,4 @@ export interface IChildProps {
 export interface IScreenTemplateBubblesBackground {
   children: React.ReactNode;
   testID: string;
-}
-
-export interface IScreenTemplateBubble {
-  size: number;
-  type: TBubbleType;
-}
-
-export interface IScreenTemplateBubbleStyles extends IScreenTemplateBubble {}
-
-export interface ScreenTemplateBubblesBackgroundStyles {
-  top: number;
-  left: number;
-  right: number;
-  bottom: number;
 }
