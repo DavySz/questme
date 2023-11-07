@@ -8,3 +8,4 @@ export * from "./new-password.factory";
 export * from "./sign-up-email-first-step.factory";
 export * from "./sign-up-email-second-step.factory";
 export * from "./sign-up-email-third-step.factory";
+export * from "./home.factory";
