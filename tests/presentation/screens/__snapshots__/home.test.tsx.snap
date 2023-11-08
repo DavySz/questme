@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home FindFriendsCardUI Should render without errors 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#9087E5",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderTopLeftRadius": 20,
+      "borderTopRightRadius": 20,
+      "gap": 16,
+      "marginBottom": 24,
+      "paddingBottom": 32,
+      "paddingLeft": 16,
+      "paddingRight": 16,
+      "paddingTop": 32,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "left": 16,
+        "position": "absolute",
+        "top": 16,
+      }
+    }
+  >
+    <SvgMock />
+  </View>
+  <View
+    style={
+      {
+        "bottom": 42,
+        "position": "absolute",
+        "right": 16,
+      }
+    }
+  >
+    <SvgMock />
+  </View>
+  <Text
+    color="neutral-white"
+    style={
+      [
+        {
+          "color": "#FFF",
+          "fontFamily": "Rubik_500Medium",
+          "fontSize": 14,
+          "lineHeight": 20,
+        },
+        {
+          "opacity": 0.8,
+        },
+      ]
+    }
+    variant="text-small"
+  >
+    FEATURED
+  </Text>
+  <Text
+    align="center"
+    color="neutral-white"
+    style={
+      {
+        "color": "#FFF",
+        "fontFamily": "Rubik_500Medium",
+        "fontSize": 18,
+        "lineHeight": 24,
+        "textAlign": "center",
+      }
+    }
+    variant="body-large-medium"
+  >
+    Take part in challenges
+    
+
+    with friends or other
+    
+
+    players
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderBottomLeftRadius": 20,
+        "borderBottomRightRadius": 20,
+        "borderTopLeftRadius": 20,
+        "borderTopRightRadius": 20,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "paddingTop": 16,
+      }
+    }
+  >
+    <View
+      side="left"
+      style={
+        {
+          "marginRight": 16,
+        }
+      }
+      testID="icon-wrapper"
+    >
+      <SvgMock
+        testID="icon-without-color"
+      />
+    </View>
+    <Text
+      color="primary"
+      style={
+        {
+          "color": "#6A5AE0",
+          "fontFamily": "Rubik_500Medium",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+      variant="body-normal-medium"
+    >
+      Find Friends
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Home RecentQuizCardUI Should render without errors 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFD6DD",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderTopLeftRadius": 20,
+      "borderTopRightRadius": 20,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginBottom": 24,
+      "paddingBottom": 16,
+      "paddingLeft": 24,
+      "paddingRight": 24,
+      "paddingTop": 16,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "gap": 8,
+      }
+    }
+  >
+    <Text
+      color="support-accent-4"
+      style={
+        [
+          {
+            "color": "#660012",
+            "fontFamily": "Rubik_500Medium",
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "opacity": 0.5,
+          },
+        ]
+      }
+      variant="text-small"
+    >
+      RECENT QUIZ
+    </Text>
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "gap": 8,
+        }
+      }
+    >
+      <SvgMock />
+      <Text
+        color="support-accent-4"
+        style={
+          {
+            "color": "#660012",
+            "fontFamily": "Rubik_500Medium",
+            "fontSize": 18,
+            "lineHeight": 24,
+          }
+        }
+        variant="body-large-medium"
+      >
+        A Basic Music Quiz
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      color="neutral-white"
+      style={
+        [
+          {
+            "color": "#FFF",
+            "fontFamily": "Rubik_500Medium",
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "position": "absolute",
+            "zIndex": 1,
+          },
+        ]
+      }
+      variant="body-small-medium"
+    >
+      60
+      %
+    </Text>
+  </View>
+</View>
+`;
