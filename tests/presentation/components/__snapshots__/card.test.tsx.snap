@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Should render component without errors 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderColor": "#EFEEFC",
+      "borderStyle": "solid",
+      "borderTopLeftRadius": 20,
+      "borderTopRightRadius": 20,
+      "borderWidth": 2,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingBottom": 8,
+      "paddingLeft": 8,
+      "paddingRight": 8,
+      "paddingTop": 8,
+      "width": "100%",
+    }
+  }
+>
+  <SvgMock
+    testID="icon-without-color"
+  />
+  <View
+    style={
+      {
+        "gap": 6,
+      }
+    }
+  >
+    <Text>
+      any-children
+    </Text>
+  </View>
+</View>
+`;

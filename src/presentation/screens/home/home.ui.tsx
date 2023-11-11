@@ -1,5 +1,5 @@
 import React from "react";
-import { ScreenTemplate, Text } from "@presentation/components";
+import { Card, ScreenTemplate, Text } from "@presentation/components";
 import {
   GreetingWrapper,
   AvatarWrapper,
@@ -20,7 +20,6 @@ import ChevronRightIcon from "@presentation/assets/icons/chevron-right-icon.svg"
 
 import { FlatList } from "react-native";
 import { FindFriendsCardUI, RecentQuizCardUI } from "./cards";
-import { Card } from "@presentation/components/card";
 
 export const HomeUI = (): ReturnType<React.FC> => {
   const mockData = [

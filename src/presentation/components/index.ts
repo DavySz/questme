@@ -6,3 +6,4 @@ export * from "./input";
 export * from "./progress";
 export * from "./bubble";
 export * from "./custom-navigation-button";
+export * from "./card";
