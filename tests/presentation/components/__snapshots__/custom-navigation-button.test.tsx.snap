@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomNavigationButton Should render component without errors 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "borderBottomLeftRadius": 32,
+      "borderBottomRightRadius": 32,
+      "borderTopLeftRadius": 32,
+      "borderTopRightRadius": 32,
+      "height": 64,
+      "justifyContent": "center",
+      "marginTop": -20,
+      "width": 64,
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#6A5AE0",
+        "borderBottomLeftRadius": 24,
+        "borderBottomRightRadius": 24,
+        "borderTopLeftRadius": 24,
+        "borderTopRightRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "marginTop": -20,
+        "opacity": 1,
+        "width": 48,
+      }
+    }
+  >
+    <SvgMock
+      testID="icon-without-color"
+    />
+  </View>
+</View>
+`;

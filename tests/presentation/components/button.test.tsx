@@ -42,7 +42,7 @@ describe("Button", () => {
 
     test("Should render Button.Icon with color", async () => {
       const { getByTestId } = customRender(
-        <Button.Icon icon={GoogleIcon} side="left" color="#000" />
+        <Button.Icon icon={GoogleIcon} side="left" color="company-facebook" />
       );
 
       expect(getByTestId("icon-with-color")).toBeTruthy();
