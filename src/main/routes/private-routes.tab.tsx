@@ -18,6 +18,7 @@ import HomeFillIcon from "@presentation/assets/icons/home-fill-icon.svg";
 import UserFillIcon from "@presentation/assets/icons/user-fill-icon.svg";
 import BarsFillIcon from "@presentation/assets/icons/bars-fill-icon.svg";
 import PlusIcon from "@presentation/assets/icons/plus-icon.svg";
+import { IRenderTabIcon } from "./types";
 
 const Tab = createBottomTabNavigator();
 
@@ -43,6 +44,23 @@ const screenOptions: BottomTabNavigationOptions = {
   },
 };
 
+const renderTabIcon = ({
+  iconProps,
+  focusedIcon: FocusedIcon,
+  inactiveIcon: InactiveIcon,
+}: IRenderTabIcon) => {
+  const { color, focused } = iconProps;
+
+  const props = {
+    height: 24,
+    width: 24,
+    color,
+  };
+
+  if (focused) return <FocusedIcon {...props} />;
+  return <InactiveIcon {...props} />;
+};
+
 export const PrivateTabRoutes = () => {
   return (
     <Tab.Navigator screenOptions={screenOptions} initialRouteName="home">
@@ -50,21 +68,24 @@ export const PrivateTabRoutes = () => {
         name="home"
         component={MakeHomeScreen}
         options={{
-          tabBarIcon: ({ color, focused }) =>
-            focused ? (
-              <HomeFillIcon height={24} width={24} color={color} />
-            ) : (
-              <HomeOutlineIcon height={24} width={24} color={color} />
-            ),
+          tabBarIcon: (props) =>
+            renderTabIcon({
+              iconProps: props,
+              focusedIcon: HomeFillIcon,
+              inactiveIcon: HomeOutlineIcon,
+            }),
         }}
       />
       <Tab.Screen
         name="search"
         component={MakeHomeScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <SearchIcon height={24} width={24} color={color} />
-          ),
+          tabBarIcon: (props) =>
+            renderTabIcon({
+              iconProps: props,
+              focusedIcon: SearchIcon,
+              inactiveIcon: SearchIcon,
+            }),
         }}
       />
       <Tab.Screen
@@ -79,24 +100,24 @@ export const PrivateTabRoutes = () => {
         name="profile"
         component={MakeHomeScreen}
         options={{
-          tabBarIcon: ({ color, focused }) =>
-            focused ? (
-              <BarsFillIcon height={24} width={24} color={color} />
-            ) : (
-              <BarsOutlineIcon height={24} width={24} color={color} />
-            ),
+          tabBarIcon: (props) =>
+            renderTabIcon({
+              iconProps: props,
+              focusedIcon: BarsFillIcon,
+              inactiveIcon: BarsOutlineIcon,
+            }),
         }}
       />
       <Tab.Screen
         name="statistics"
         component={MakeHomeScreen}
         options={{
-          tabBarIcon: ({ color, focused }) =>
-            focused ? (
-              <UserFillIcon height={24} width={24} color={color} />
-            ) : (
-              <UserOutlineIcon height={24} width={24} color={color} />
-            ),
+          tabBarIcon: (props) =>
+            renderTabIcon({
+              iconProps: props,
+              focusedIcon: UserFillIcon,
+              inactiveIcon: UserOutlineIcon,
+            }),
         }}
       />
     </Tab.Navigator>
