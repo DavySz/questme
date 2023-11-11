@@ -1,13 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { PublicRoutes } from "./public-routes";
-import { PrivateRoutes } from "./private-routes";
+import { PrivateTabRoutes } from "./private-routes.tab";
 
 export const AppRoutes = () => {
   return (
     <NavigationContainer>
-      {/* <PublicRoutes /> */}
-      <PrivateRoutes />
+      <PrivateTabRoutes />
     </NavigationContainer>
   );
 };
