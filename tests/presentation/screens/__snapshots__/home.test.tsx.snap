@@ -160,6 +160,663 @@ exports[`Home FindFriendsCardUI Should render without errors 1`] = `
 </View>
 `;
 
+exports[`Home HomeContainer Should render without errors 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#6A5AE0",
+      "flexBasis": 0,
+      "flexGrow": 1,
+      "flexShrink": 1,
+    }
+  }
+  testID="default-container"
+  variant="primary"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "paddingBottom": 24,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 16,
+        "width": "100%",
+      }
+    }
+    variant="primary"
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "gap": 4,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "gap": 8,
+              "width": "100%",
+            }
+          }
+        >
+          <SvgMock />
+          <Text
+            color="support-accent-1"
+            style={
+              {
+                "color": "#FFD6DD",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 12,
+                "lineHeight": 18,
+              }
+            }
+            variant="text-x-small"
+          >
+            GOOD MORNING
+          </Text>
+        </View>
+        <Text
+          color="neutral-white"
+          style={
+            {
+              "color": "#FFF",
+              "fontFamily": "Rubik_500Medium",
+              "fontSize": 24,
+              "lineHeight": 36,
+            }
+          }
+          variant="heading-3"
+        >
+          Madelyn Dias
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "red",
+            "borderBottomLeftRadius": 28,
+            "borderBottomRightRadius": 28,
+            "borderTopLeftRadius": 28,
+            "borderTopRightRadius": 28,
+            "height": 56,
+            "justifyContent": "center",
+            "width": 56,
+          }
+        }
+      >
+        <SvgMock />
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "flexGrow": 1,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+    style={{}}
+    variant="primary"
+  >
+    <View>
+      <View
+        style={
+          {
+            "paddingBottom": 0,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 0,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#FFD6DD",
+              "borderBottomLeftRadius": 20,
+              "borderBottomRightRadius": 20,
+              "borderTopLeftRadius": 20,
+              "borderTopRightRadius": 20,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 24,
+              "paddingBottom": 16,
+              "paddingLeft": 24,
+              "paddingRight": 24,
+              "paddingTop": 16,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "gap": 8,
+              }
+            }
+          >
+            <Text
+              color="support-accent-4"
+              style={
+                [
+                  {
+                    "color": "#660012",
+                    "fontFamily": "Rubik_500Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                  },
+                  {
+                    "opacity": 0.5,
+                  },
+                ]
+              }
+              variant="text-small"
+            >
+              RECENT QUIZ
+            </Text>
+            <View
+              style={
+                {
+                  "flexDirection": "row",
+                  "gap": 8,
+                }
+              }
+            >
+              <SvgMock />
+              <Text
+                color="support-accent-4"
+                style={
+                  {
+                    "color": "#660012",
+                    "fontFamily": "Rubik_500Medium",
+                    "fontSize": 18,
+                    "lineHeight": 24,
+                  }
+                }
+                variant="body-large-medium"
+              >
+                A Basic Music Quiz
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <Text
+              color="neutral-white"
+              style={
+                [
+                  {
+                    "color": "#FFF",
+                    "fontFamily": "Rubik_500Medium",
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                  },
+                  {
+                    "position": "absolute",
+                    "zIndex": 1,
+                  },
+                ]
+              }
+              variant="body-small-medium"
+            >
+              75
+              %
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#9087E5",
+              "borderBottomLeftRadius": 20,
+              "borderBottomRightRadius": 20,
+              "borderTopLeftRadius": 20,
+              "borderTopRightRadius": 20,
+              "gap": 16,
+              "marginBottom": 24,
+              "paddingBottom": 32,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 32,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "left": 16,
+                "position": "absolute",
+                "top": 16,
+              }
+            }
+          >
+            <SvgMock />
+          </View>
+          <View
+            style={
+              {
+                "bottom": 42,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <SvgMock />
+          </View>
+          <Text
+            color="neutral-white"
+            style={
+              [
+                {
+                  "color": "#FFF",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 14,
+                  "lineHeight": 20,
+                },
+                {
+                  "opacity": 0.8,
+                },
+              ]
+            }
+            variant="text-small"
+          >
+            FEATURED
+          </Text>
+          <Text
+            align="center"
+            color="neutral-white"
+            style={
+              {
+                "color": "#FFF",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 18,
+                "lineHeight": 24,
+                "textAlign": "center",
+              }
+            }
+            variant="body-large-medium"
+          >
+            Take part in challenges
+            
+
+            with friends or other
+            
+
+            players
+          </Text>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={false}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FFF",
+                "borderBottomLeftRadius": 20,
+                "borderBottomRightRadius": 20,
+                "borderTopLeftRadius": 20,
+                "borderTopRightRadius": 20,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "opacity": 1,
+                "paddingBottom": 16,
+                "paddingLeft": 16,
+                "paddingRight": 16,
+                "paddingTop": 16,
+              }
+            }
+          >
+            <View
+              side="left"
+              style={
+                {
+                  "marginRight": 16,
+                }
+              }
+              testID="icon-wrapper"
+            >
+              <SvgMock
+                testID="icon-without-color"
+              />
+            </View>
+            <Text
+              color="primary"
+              style={
+                {
+                  "color": "#6A5AE0",
+                  "fontFamily": "Rubik_500Medium",
+                  "fontSize": 16,
+                  "lineHeight": 24,
+                }
+              }
+              variant="body-normal-medium"
+            >
+              Find Friends
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#FFF",
+            "borderTopLeftRadius": 32,
+            "borderTopRightRadius": 32,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 0,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 24,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            color="neutral-black"
+            style={
+              {
+                "color": "#0C092A",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 20,
+                "lineHeight": 28,
+              }
+            }
+            variant="body-x-large"
+          >
+            Live Quizzes
+          </Text>
+          <Text
+            color="primary"
+            style={
+              {
+                "color": "#6A5AE0",
+                "fontFamily": "Rubik_500Medium",
+                "fontSize": 14,
+                "lineHeight": 20,
+              }
+            }
+            variant="body-small-medium"
+          >
+            See all
+          </Text>
+        </View>
+        <RCTScrollView
+          ListFooterComponent={<Styled(View) />}
+          data={
+            [
+              {
+                "description": "Math • 12 Quizzes",
+                "id": 1,
+                "image": "SvgMock",
+                "title": "Statistics Math Quiz",
+              },
+              {
+                "description": "Math • 12 Quizzes",
+                "id": 2,
+                "image": "SvgMock",
+                "title": "Statistics Math Quiz",
+              },
+            ]
+          }
+          getItem={[Function]}
+          getItemCount={[Function]}
+          keyExtractor={[Function]}
+          onContentSizeChange={[Function]}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEnabled={false}
+          scrollEventThrottle={50}
+          showsVerticalScrollIndicator={false}
+          stickyHeaderIndices={[]}
+          viewabilityConfigCallbackPairs={[]}
+        >
+          <View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  {
+                    "marginTop": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderBottomLeftRadius": 20,
+                      "borderBottomRightRadius": 20,
+                      "borderColor": "#EFEEFC",
+                      "borderStyle": "solid",
+                      "borderTopLeftRadius": 20,
+                      "borderTopRightRadius": 20,
+                      "borderWidth": 2,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingBottom": 8,
+                      "paddingLeft": 8,
+                      "paddingRight": 8,
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <SvgMock
+                    testID="icon-without-color"
+                  />
+                  <View
+                    style={
+                      {
+                        "gap": 6,
+                      }
+                    }
+                  >
+                    <Text
+                      color="neutral-black"
+                      style={
+                        {
+                          "color": "#0C092A",
+                          "fontFamily": "Rubik_500Medium",
+                          "fontSize": 16,
+                          "lineHeight": 24,
+                        }
+                      }
+                      variant="body-normal-medium"
+                    >
+                      Statistics Math Quiz
+                    </Text>
+                    <Text
+                      color="neutral-grey-2"
+                      style={
+                        {
+                          "color": "#858494",
+                          "fontFamily": "Rubik_400Regular",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                      variant="body-x-small-regular"
+                    >
+                      Math • 12 Quizzes
+                    </Text>
+                  </View>
+                  <SvgMock
+                    color="#6A5AE0"
+                    testID="icon-with-color"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onFocusCapture={[Function]}
+              onLayout={[Function]}
+              style={null}
+            >
+              <View
+                style={
+                  {
+                    "marginTop": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderBottomLeftRadius": 20,
+                      "borderBottomRightRadius": 20,
+                      "borderColor": "#EFEEFC",
+                      "borderStyle": "solid",
+                      "borderTopLeftRadius": 20,
+                      "borderTopRightRadius": 20,
+                      "borderWidth": 2,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                      "paddingBottom": 8,
+                      "paddingLeft": 8,
+                      "paddingRight": 8,
+                      "paddingTop": 8,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <SvgMock
+                    testID="icon-without-color"
+                  />
+                  <View
+                    style={
+                      {
+                        "gap": 6,
+                      }
+                    }
+                  >
+                    <Text
+                      color="neutral-black"
+                      style={
+                        {
+                          "color": "#0C092A",
+                          "fontFamily": "Rubik_500Medium",
+                          "fontSize": 16,
+                          "lineHeight": 24,
+                        }
+                      }
+                      variant="body-normal-medium"
+                    >
+                      Statistics Math Quiz
+                    </Text>
+                    <Text
+                      color="neutral-grey-2"
+                      style={
+                        {
+                          "color": "#858494",
+                          "fontFamily": "Rubik_400Regular",
+                          "fontSize": 12,
+                          "lineHeight": 18,
+                        }
+                      }
+                      variant="body-x-small-regular"
+                    >
+                      Math • 12 Quizzes
+                    </Text>
+                  </View>
+                  <SvgMock
+                    color="#6A5AE0"
+                    testID="icon-with-color"
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              onLayout={[Function]}
+            >
+              <View
+                style={
+                  {
+                    "marginBottom": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
 exports[`Home RecentQuizCardUI Should render without errors 1`] = `
 <View
   style={

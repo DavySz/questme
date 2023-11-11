@@ -5,8 +5,19 @@ import {
 
 import { customRender } from "../../utils";
 import React from "react";
+import { HomeContainer } from "@presentation/screens";
 
 describe("Home", () => {
+  describe("HomeContainer", () => {
+    test("Should render without errors", () => {
+      const tree = customRender(
+        <HomeContainer />
+      );
+
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
   describe("RecentQuizCardUI", () => {
     test("Should render without errors", () => {
       const tree = customRender(
