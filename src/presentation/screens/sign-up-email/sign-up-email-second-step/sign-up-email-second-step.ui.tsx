@@ -10,7 +10,9 @@ import LockIcon from "@presentation/assets/icons/lock-icon.svg";
 import { ISignUpEmailSecondStep } from "./types";
 
 export const SignUpEmailSecondStepUI = ({
+  user,
   handleGoBack,
+  handleUpdateUser,
   handleSignUpEmailThirdStepScreen,
 }: ISignUpEmailSecondStep): ReturnType<React.FC<ISignUpEmailSecondStep>> => {
   return (
@@ -23,7 +25,11 @@ export const SignUpEmailSecondStepUI = ({
           <Input.Label>Password</Input.Label>
           <Input.Root>
             <Input.Icon icon={LockIcon} color="primary" />
-            <Input.Text placeholder="Your password" />
+            <Input.Text
+              onChangeText={handleUpdateUser}
+              placeholder="Your password"
+              value={user.password}
+            />
           </Input.Root>
         </Main>
         <Footer>

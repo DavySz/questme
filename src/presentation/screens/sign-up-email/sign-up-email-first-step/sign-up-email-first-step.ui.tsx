@@ -10,7 +10,9 @@ import LetterIcon from "@presentation/assets/icons/letter-icon.svg";
 import { ISignUpEmailFirstStep } from "./types";
 
 export const SignUpEmailFirstStepUI = ({
+  user,
   handleGoBack,
+  handleUpdateUser,
   handleSignUpEmailSecondStepScreen,
 }: ISignUpEmailFirstStep): ReturnType<React.FC<ISignUpEmailFirstStep>> => {
   return (
@@ -23,7 +25,11 @@ export const SignUpEmailFirstStepUI = ({
           <Input.Label>Email Address</Input.Label>
           <Input.Root>
             <Input.Icon icon={LetterIcon} color="primary" />
-            <Input.Text placeholder="Your email address" />
+            <Input.Text
+              placeholder="Your email address"
+              onChangeText={handleUpdateUser}
+              value={user.email}
+            />
           </Input.Root>
         </Main>
         <Footer>
