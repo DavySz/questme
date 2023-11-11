@@ -4,17 +4,69 @@ import {
   GreetingWrapper,
   AvatarWrapper,
   GreetingRow,
+  Content,
   Header,
   Row,
-  Content,
+  Quizzes,
+  Main,
+  CardWrapper,
 } from "./home.styles";
 
 import SunIcon from "@presentation/assets/icons/sun-icon.svg";
 import AvatarIcon from "@presentation/assets/icons/avatar-icon.svg";
-import { RecentQuizCardUI } from "./cards/recent-quiz/recent-quiz.ui";
-import { FindFriendsCardUI } from "./cards/find-friends/find-friends.ui";
+import StatisticsIcon from "@presentation/assets/icons/statistics-icon.svg";
+import ChevronRightIcon from "@presentation/assets/icons/chevron-right-icon.svg";
+
+import { FlatList } from "react-native";
+import { FindFriendsCardUI, RecentQuizCardUI } from "./cards";
+import { Card } from "@presentation/components/card";
 
 export const HomeUI = (): ReturnType<React.FC> => {
+  const mockData = [
+    {
+      id: 1,
+      title: "Statistics Math Quiz",
+      description: "Math • 12 Quizzes",
+      image: StatisticsIcon,
+    },
+    {
+      id: 2,
+      title: "Statistics Math Quiz",
+      description: "Math • 12 Quizzes",
+      image: StatisticsIcon,
+    },
+  ];
+
+  const renderQuizzes = () => {
+    return (
+      <FlatList
+        data={mockData}
+        scrollEnabled={false}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(item) => String(item.id)}
+        renderItem={({ item }) => (
+          <CardWrapper>
+            <Card.Root>
+              <Card.Icon icon={item.image} />
+              <Card.Group>
+                <Text.Root variant="body-normal-medium" color="neutral-black">
+                  {item.title}
+                </Text.Root>
+                <Text.Root
+                  variant="body-x-small-regular"
+                  color="neutral-grey-2"
+                >
+                  {item.description}
+                </Text.Root>
+              </Card.Group>
+              <Card.Icon icon={ChevronRightIcon} color="primary" />
+            </Card.Root>
+          </CardWrapper>
+        )}
+      />
+    );
+  };
+
   return (
     <ScreenTemplate.Root>
       <Header>
@@ -36,8 +88,21 @@ export const HomeUI = (): ReturnType<React.FC> => {
         </Row>
       </Header>
       <Content>
-        <RecentQuizCardUI totalQuestions={100} progress={75} />
-        <FindFriendsCardUI />
+        <Main>
+          <RecentQuizCardUI totalQuestions={100} progress={75} />
+          <FindFriendsCardUI />
+        </Main>
+        <Quizzes>
+          <Row>
+            <Text.Root variant="body-x-large" color="neutral-black">
+              Live Quizzes
+            </Text.Root>
+            <Text.Root variant="body-small-medium" color="primary">
+              See all
+            </Text.Root>
+          </Row>
+          {renderQuizzes()}
+        </Quizzes>
       </Content>
     </ScreenTemplate.Root>
   );
