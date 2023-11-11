@@ -73,3 +73,7 @@ export const Main = styled.View`
 export const CardWrapper = styled.View`
   margin-top: 16px;
 `;
+
+export const ListFooter = styled.View`
+  margin-bottom: 24px;
+`;

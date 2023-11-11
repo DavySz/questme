@@ -10,6 +10,7 @@ import {
   Quizzes,
   Main,
   CardWrapper,
+  ListFooter,
 } from "./home.styles";
 
 import SunIcon from "@presentation/assets/icons/sun-icon.svg";
@@ -42,6 +43,7 @@ export const HomeUI = (): ReturnType<React.FC> => {
       <FlatList
         data={mockData}
         scrollEnabled={false}
+        ListFooterComponent={<ListFooter />}
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => String(item.id)}
         renderItem={({ item }) => (
