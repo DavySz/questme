@@ -6,7 +6,7 @@ import {
 } from "@presentation/components";
 import { Content, Footer, Main } from "./sign-up-email-third-step.styles";
 
-import UserIcon from "@presentation/assets/icons/user-icon.svg";
+import UserIcon from "@presentation/assets/icons/user-outline-icon.svg";
 import { ISignUpEmailThirdStep } from "./types";
 
 export const SignUpEmailThirdStepUI = ({
