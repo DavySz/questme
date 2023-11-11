@@ -73,7 +73,7 @@ export const OnboardingUI = React.forwardRef(
               >
                 <Button.Text>Sign Up</Button.Text>
               </Button.Root>
-              <Text.Root variant="body-normal-regular" color="neutral-gey-2">
+              <Text.Root variant="body-normal-regular" color="neutral-grey-2">
                 Already have an account?{" "}
                 <Text.Root
                   onPress={handleGoToLoginScreen}

@@ -13,7 +13,7 @@ export const getButtonBackground = (
 ): string => {
   const colors: Record<TButtonVariant, string> = {
     primary: theme.colors.primary,
-    secondary: theme.colors.neutral["gey-5"],
+    secondary: theme.colors.neutral["grey-5"],
     tertiary: theme.colors.transparent,
     facebook: theme.colors.company.facebook,
     google: theme.colors.neutral.white,
@@ -63,7 +63,7 @@ const getIconSide = (side: TIconSide) => {
 const getBorder = (variant: TButtonVariant, theme: TTheme) => {
   if (variant === "google") {
     return css`
-      border: 1px solid ${theme.colors.neutral["gey-4"]};
+      border: 1px solid ${theme.colors.neutral["grey-4"]};
     `;
   }
 };

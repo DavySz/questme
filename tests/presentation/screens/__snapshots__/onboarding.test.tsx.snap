@@ -524,7 +524,7 @@ exports[`Onboarding Onboarding Container Should render onboarding container with
           </Text>
         </View>
         <Text
-          color="neutral-gey-2"
+          color="neutral-grey-2"
           style={
             {
               "color": "#858494",

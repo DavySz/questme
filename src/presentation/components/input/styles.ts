@@ -4,7 +4,7 @@ import { TTheme } from "@presentation/styles";
 
 const getBorderColor = (isFocused: boolean, theme: TTheme) => {
   if (isFocused) return theme.colors.primary;
-  return theme.colors.neutral["gey-5"];
+  return theme.colors.neutral["grey-5"];
 };
 
 export const CustomInput = styled.TextInput`

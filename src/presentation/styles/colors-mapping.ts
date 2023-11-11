@@ -19,11 +19,11 @@ export function colorMapping(color: TThemeColors) {
     "neutral-black": colors.neutral.black,
     "neutral-white": colors.neutral.white,
 
-    "neutral-gey-1": colors.neutral["gey-1"],
-    "neutral-gey-2": colors.neutral["gey-2"],
-    "neutral-gey-3": colors.neutral["gey-3"],
-    "neutral-gey-4": colors.neutral["gey-4"],
-    "neutral-gey-5": colors.neutral["gey-5"],
+    "neutral-grey-1": colors.neutral["grey-1"],
+    "neutral-grey-2": colors.neutral["grey-2"],
+    "neutral-grey-3": colors.neutral["grey-3"],
+    "neutral-grey-4": colors.neutral["grey-4"],
+    "neutral-grey-5": colors.neutral["grey-5"],
 
     "company-facebook": colors.company.facebook,
   };

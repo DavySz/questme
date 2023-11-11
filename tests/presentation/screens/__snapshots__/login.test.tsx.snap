@@ -327,7 +327,7 @@ exports[`Login Should render without errors 1`] = `
             }
           />
           <Text
-            color="neutral-gey-2"
+            color="neutral-grey-2"
             style={
               {
                 "color": "#858494",
@@ -637,7 +637,7 @@ exports[`Login Should render without errors 1`] = `
         </View>
         <Text
           align="center"
-          color="neutral-gey-2"
+          color="neutral-grey-2"
           style={
             {
               "color": "#858494",
@@ -652,7 +652,7 @@ exports[`Login Should render without errors 1`] = `
           By continuing, you agree to the Terms of
            
           <Text
-            color="neutral-gey-1"
+            color="neutral-grey-1"
             style={
               {
                 "color": "#49465F",

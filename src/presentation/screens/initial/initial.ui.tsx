@@ -34,7 +34,7 @@ export const InitialUI = ({
             </Text.Root>
             <Text.Root
               align="center"
-              color="neutral-gey-2"
+              color="neutral-grey-2"
               variant="body-normal-regular"
             >
               Login or create an account to take quiz, take part in challenge,

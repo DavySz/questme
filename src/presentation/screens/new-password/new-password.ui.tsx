@@ -11,7 +11,7 @@ export const NewPasswordUI = ({
     <ScreenTemplate.Root variant="secondary">
       <ScreenTemplate.Header>New Password</ScreenTemplate.Header>
       <Content>
-        <Text.Root variant="body-normal-regular" color="neutral-gey-2">
+        <Text.Root variant="body-normal-regular" color="neutral-grey-2">
           Your new password must be different from previous used passwords.
         </Text.Root>
         <Main>

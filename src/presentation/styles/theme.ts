@@ -21,11 +21,11 @@ export const theme = {
       black: "#0C092A",
       white: "#FFF",
 
-      "gey-1": "#49465F",
-      "gey-2": "#858494",
-      "gey-3": "#CCC",
-      "gey-4": "#E6E6E6",
-      "gey-5": "#EFEEFC",
+      "grey-1": "#49465F",
+      "grey-2": "#858494",
+      "grey-3": "#CCC",
+      "grey-4": "#E6E6E6",
+      "grey-5": "#EFEEFC",
     },
 
     chart: {

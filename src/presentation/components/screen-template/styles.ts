@@ -19,7 +19,7 @@ export const getBackgroundColor = (
 ) => {
   const color: Record<TScreenTemplateVariant, string> = {
     primary: theme.colors.primary,
-    secondary: theme.colors.neutral["gey-5"],
+    secondary: theme.colors.neutral["grey-5"],
     tertiary: theme.colors.primary,
   };
 

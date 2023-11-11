@@ -3,7 +3,7 @@
 exports[`Divider Should render component without errors 1`] = `
 [
   <Text
-    color="neutral-gey-2"
+    color="neutral-grey-2"
     style={
       {
         "color": "#858494",

@@ -14,7 +14,7 @@ export const ResetPasswordUI = ({
       </ScreenTemplate.Header>
       <Content testID="reset-password-screen-content">
         <Main>
-          <Text.Root variant="body-normal-regular" color="neutral-gey-2">
+          <Text.Root variant="body-normal-regular" color="neutral-grey-2">
             Enter your email and we will send you a link to reset your password.
           </Text.Root>
           <InputWrapper>

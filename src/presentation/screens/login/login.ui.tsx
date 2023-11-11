@@ -83,11 +83,11 @@ export const LoginUI = ({
             </ButtonWrapper>
             <Text.Root
               variant="body-small-regular"
-              color="neutral-gey-2"
+              color="neutral-grey-2"
               align="center"
             >
               By continuing, you agree to the Terms of{" "}
-              <Text.Root variant="body-small-medium" color="neutral-gey-1">
+              <Text.Root variant="body-small-medium" color="neutral-grey-1">
                 Services & Privacy Policy.
               </Text.Root>
             </Text.Root>
