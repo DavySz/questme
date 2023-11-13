@@ -6,6 +6,7 @@ import { publicRoutes } from "@main/routes/register-routes.public";
 
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "@presentation/styles";
+import { RecoilRoot } from "recoil";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,13 +19,15 @@ export const TestingPublicNavigator = ({
 }: ITestingPublicNavigator): ReturnType<React.FC<ITestingPublicNavigator>> => {
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName={currentRoute}>
-          {publicRoutes.map(({ component, name }) => (
-            <Stack.Screen name={name} component={component} key={name} />
-          ))}
-        </Stack.Navigator>
-      </NavigationContainer>
+      <RecoilRoot>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName={currentRoute}>
+            {publicRoutes.map(({ component, name }) => (
+              <Stack.Screen name={name} component={component} key={name} />
+            ))}
+          </Stack.Navigator>
+        </NavigationContainer>
+      </RecoilRoot>
     </ThemeProvider>
   );
 };
