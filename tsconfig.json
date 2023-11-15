@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "@presentation/*": ["./src/presentation/*"],
+      "@validation/*": ["./src/validation/*"],
       "@domain/*": ["./src/domain/*"],
       "@infra/*": ["./src/infra/*"],
       "@main/*": ["./src/main/*"],
