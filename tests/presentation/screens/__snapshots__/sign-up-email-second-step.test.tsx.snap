@@ -185,6 +185,7 @@ exports[`SignUpEmailSecondStep Should render screen without errors 1`] = `
           />
           <TextInput
             onBlur={[Function]}
+            onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Your password"
             style={
@@ -195,6 +196,7 @@ exports[`SignUpEmailSecondStep Should render screen without errors 1`] = `
               }
             }
             testID="custom-input"
+            value=""
           />
         </View>
       </View>

@@ -1,10 +1,16 @@
 import { SignUpEmailThirdStepContainer } from "@presentation/screens";
 import { fireEvent, render } from "@testing-library/react-native";
 import { TestingPublicNavigator, customRender } from "../../utils";
+import { CreateUserByEmailPasswordSpy } from "../../domain/mocks";
 
 describe("SignUpEmailThirdStep", () => {
   test("Should render screen without errors", () => {
-    const tree = customRender(<SignUpEmailThirdStepContainer />).toJSON();
+    const tree = customRender(
+      <SignUpEmailThirdStepContainer
+        createUserByEmailPassword={new CreateUserByEmailPasswordSpy()}
+      />
+    ).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 

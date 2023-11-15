@@ -185,6 +185,7 @@ exports[`SignUpEmailThirdStep Should render screen without errors 1`] = `
           />
           <TextInput
             onBlur={[Function]}
+            onChangeText={[Function]}
             onFocus={[Function]}
             placeholder="Your username"
             style={
@@ -195,6 +196,7 @@ exports[`SignUpEmailThirdStep Should render screen without errors 1`] = `
               }
             }
             testID="custom-input"
+            value=""
           />
         </View>
       </View>
@@ -294,7 +296,7 @@ exports[`SignUpEmailThirdStep Should render screen without errors 1`] = `
           }
           accessible={true}
           collapsable={false}
-          focusable={false}
+          focusable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
