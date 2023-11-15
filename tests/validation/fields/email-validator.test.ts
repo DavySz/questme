@@ -14,4 +14,10 @@ describe("EmailValidator", () => {
     const isValid = sut.isValid("any-invalid-email@");
     expect(isValid).toBeFalsy();
   });
+
+  test("Should returns true when email is valid", () => {
+    const { sut } = makeSut();
+    const isValid = sut.isValid("any-valid-email@gmail.com");
+    expect(isValid).toBeTruthy();
+  });
 });
