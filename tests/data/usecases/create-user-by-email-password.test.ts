@@ -8,11 +8,12 @@ import {
 
 import { mockUser } from "../../domain/models";
 import { UserModel } from "@domain/models";
+import { UserAlreadyExistsError } from "@domain/errors";
 
 const makeSut = (path: string = "http://test.com.br") => {
-  const findOneByEmailSpy = new FindOneByEmailSpy<any>();
+  const findOneByEmailSpy = new FindOneByEmailSpy<UserModel>();
+  const setItemSpy = new SetItemSpy<UserModel>();
   const createHashSpy = new CreateHashSpy();
-  const setItemSpy = new SetItemSpy<any>();
   const encryptSpy = new EncryptSpy();
 
   const sut = new RemoteCreateUserByEmailPassword(
@@ -89,5 +90,15 @@ describe("RemoteCreateUserByEmailPassword", () => {
     };
 
     expect(setSpy).toHaveBeenCalledWith(path, newUshWithHash);
+  });
+
+  test("Should throws UserAlreadyExistsError error if user received already exists", async () => {
+    const { sut, findOneByEmailSpy } = makeSut();
+
+    jest.spyOn(findOneByEmailSpy, "findOne").mockResolvedValue(mockUser);
+
+    const response = sut.create(mockUser);
+
+    expect(response).rejects.toThrow(new UserAlreadyExistsError());
   });
 });
