@@ -54,4 +54,16 @@ describe("RemoteCreateUserByEmailPassword", () => {
       process.env.ENCRYPT_SECRET
     );
   });
+
+  test("Should findOneByEmail method receive correct params", async () => {
+    const path = "any-path";
+
+    const { sut, findOneByEmailSpy } = makeSut(path);
+
+    const findOneSpy = jest.spyOn(findOneByEmailSpy, "findOne");
+
+    await sut.create(mockUser);
+
+    expect(findOneSpy).toHaveBeenCalledWith(path, mockUser.email);
+  });
 });
