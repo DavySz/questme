@@ -5,7 +5,8 @@ import {
   CreateHashSpy,
   FindOneByEmailSpy,
 } from "../mocks";
-import { UserModel } from "@domain/models";
+
+import { mockUser } from "../../domain/models";
 
 const makeSut = (path: string = "http://test.com.br") => {
   const findOneByEmailSpy = new FindOneByEmailSpy<any>();
@@ -36,15 +37,21 @@ describe("RemoteCreateUserByEmailPassword", () => {
 
     const createSpy = jest.spyOn(sut, "create");
 
-    const userMock: UserModel = {
-      email: "any@gmail.com",
-      password: "12345678",
-      username: "any user",
-      userId: "",
-    };
+    await sut.create(mockUser);
 
-    await sut.create(userMock);
+    expect(createSpy).toHaveBeenCalledWith(mockUser);
+  });
 
-    expect(createSpy).toHaveBeenCalledWith(userMock);
+  test("Should encrypt method receive correct params", async () => {
+    const { sut, encryptSpy } = makeSut();
+
+    const createSpyOn = jest.spyOn(encryptSpy, "encrypt");
+
+    await sut.create(mockUser);
+
+    expect(createSpyOn).toHaveBeenCalledWith(
+      mockUser.password,
+      process.env.ENCRYPT_SECRET
+    );
   });
 });
