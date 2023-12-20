@@ -8,13 +8,12 @@ import { Content, Footer, Main } from "./sign-up-email-third-step.styles";
 
 import UserIcon from "@presentation/assets/icons/user-outline-icon.svg";
 import { ISignUpEmailThirdStep } from "./types";
-import { useRecoilState } from "recoil";
-import { signUpEmailState } from "@presentation/recoil/atoms";
 
 export const SignUpEmailThirdStepUI = ({
   user,
   handleGoBack,
   handleUpdateUser,
+  handleCreateUser,
 }: ISignUpEmailThirdStep): ReturnType<React.FC<ISignUpEmailThirdStep>> => {
   return (
     <ScreenTemplate.Root variant="secondary">
@@ -38,7 +37,10 @@ export const SignUpEmailThirdStepUI = ({
             <Progress.Label />
             <Progress.Bar />
           </Progress.Root>
-          <Button.Root onPress={() => console.log(JSON.stringify(user))}>
+          <Button.Root
+            onPress={handleCreateUser}
+            testID="create-account-button"
+          >
             <Button.Text>Create account</Button.Text>
           </Button.Root>
         </Footer>
