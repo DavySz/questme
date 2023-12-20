@@ -322,6 +322,7 @@ exports[`SignUpEmailThirdStep Should render screen without errors 1`] = `
               "width": "100%",
             }
           }
+          testID="create-account-button"
         >
           <Text
             color="neutral-white"
