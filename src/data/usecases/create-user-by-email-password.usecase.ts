@@ -43,7 +43,7 @@ export class RemoteCreateUserByEmailPassword
 
       await this.setItem.set(this.path, newUser);
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error.message);
     }
   }
 }
